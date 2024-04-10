@@ -1,0 +1,23 @@
+---
+---
+
+@import 'jekyll-theme-cayman';
+
+
+.page-header {
+background-image: 
+    linear-gradient(to right, rgba(255, 132, 0, 0.8), rgba(5, 171, 204, 0.8)),
+    url('/assets/img/bitmap3.svg');
+    background-size: cover;
+    background-position: top;
+}
+.project-name {
+    color: black;
+  }
+.project-tagline {
+    font-weight: bold;
+    color: black;
+  }
+.emphasize {
+    color: orange;
+  }
