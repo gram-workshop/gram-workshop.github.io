@@ -8,7 +8,7 @@ description: Frequently asked questions
 Here are a few most common question that we recieve:
 
 ### Can I submit my Neurips paper to this workshop? 
-No. The paper submission is strictly for proceedings, so that requires at least 30% novelty on previously submitted/published work. But you could submit a blogpost on the same work.
+You could submit your neurips paper to the new extended abstract track and not for the Proceedings track as that requires at least 30% novelty on previously submitted/published work. You could also submit a blogpost on the same work.
  
 ### Where will the accepted paper be published?
 The accepted papers will be published in PMLR under GRaM workshop proceedings. 
