@@ -86,3 +86,32 @@ background-image:
 .organizer-bio p {
   margin: 0;
 }
+
+
+
+
+.keynote-speaker {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px; /* Add spacing between speakers */
+}
+
+.speaker-photo {
+  width: 150px; /* Fixed width */
+  height: 150px; /* Fixed height */
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.speaker-bio {
+  max-width: 100%;
+}
+
+.speaker-bio strong {
+  font-size: 1.5em; /* Adjust the font size for the name */
+}
+
+.speaker-bio p {
+  margin: 0 0 10px 0; /* Add spacing between paragraphs */
+}
