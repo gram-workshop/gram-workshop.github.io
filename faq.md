@@ -29,7 +29,7 @@ Yes. We accepted previously accepted submissions in our Blogpost track.
 Yes, you could totally submit a blogpost on your own work. 
 
 ### Will there be travel awards for accepted submissions?  
-We plan to award travel awards for early stage researchers who not have enough funding to travel for the conference. More details will be posted on our website and twitter account. 
+We plan to award travel awards for early stage researchers who not have enough funding to travel for the conference. Please fill this [ELLIS mobility grantforGRaM form](https://docs.google.com/forms/d/e/1FAIpQLSeQ5aHWrrR4ryBfDOh-PJ4Wa0GexSX2ZDuIu-pYj4xm9sfljw/viewform) and you will hear from us very soon. 
 
 ### Where can I get an invite letter to apply for my visa to attend ICML?
 If you need to apply for visa to attend ICML, please write to our organizers email id. 
