@@ -31,4 +31,27 @@ background-image:
   // display: inline-block; /* Needed to apply padding and border properly */
   // background-color: transparent; /* Optional: Makes the background transparent */
 }
-  
+
+.organizer {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.organizer-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.organizer-bio {
+  max-width: 600px;
+}
+
+.organizer-bio strong {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
