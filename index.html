@@ -43,78 +43,92 @@
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <header class="page-header" role="banner">
-      <h1 class="project-name">GRaM Workshop @ ICML 2024</h1>
-      <h2 class="project-tagline">ELLIS Workshop on Geometry-grounded Representation Learning and Generative Modeling</h2>
+      <h1 class="project-name">GRaM Workshop @ ICLR 2025</h1>
+      <h2 class="project-tagline">Workshop on Geometry-grounded Representation Learning and Generative Modeling</h2>
       
         <a href="./index.html" class="btn">GRaM</a>
-        <a href="./cfp.html" class="btn">Call for papers</a>
-        <a href="./faq.html", class="btn">FAQs </a>
-	<a href="./speakers.html", class="btn">Speakers</a>
-	<a href="./schedule.html", class="btn">Schedule</a>
+        <!-- UNCOMMENT HERE AND FILL WITH NEW INFORMATION WHEN WE HAVE CONFIRMED SCHEDULE AND SPEAKERS -->
+        <!-- <a href="./cfp.html" class="btn">Call for papers</a> -->
+        <!-- <a href="./faq.html", class="btn">FAQs </a> -->
+	<!-- <a href="./speakers.html", class="btn">Speakers</a> -->
+	<!-- <a href="./schedule.html", class="btn">Schedule</a> -->
+	<a href="./archive.html" class="btn">Previous Editions</a>
     </header>
     <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
-      <img src="assets/img/ICML-logo.svg" alt="ICML Logo" style="width: 200px; margin-right: 100px;">
+      <!-- CHANGE HERE TO ADD LOGOS IF ANY (ICLR, ELLIS, ....) -->
+      <!-- <img src="assets/img/ICML-logo.svg" alt="ICML Logo" style="width: 200px; margin-right: 100px;">
         <img src="assets/img/20230223_ELLIS_Logo_RGB_hor_subline.png" alt="ELLIS Logo" style="width: 380px; margin-right: 100px;">
         <img src="assets/img/elise .png" alt="ELISE Logo" style="width: 150px; margin-right: 100px;">
-        <img src="assets/img/EN-Funded by the EU-POS.png" alt="EU Logo" style="width: 280px;">
+        <img src="assets/img/EN-Funded by the EU-POS.png" alt="EU Logo" style="width: 280px;"> -->
       </div>
     <main id="content" class="main-content" role="main">
 
 
 	   
       
-      <h2 id="motivation">Accepted submissions</h2>
+      <h2 id="motivation">(07/12/2025) Exciting news! GRAM is going to Rio!</h2>
 
-      <p><span style="color: rgb(255, 136, 0);">Accepted papers</span> in both the extended abstract and proceedings track of GRaM can be found <a href="https://openreview.net/group?id=ICML.cc/2024/Workshop/GRaM">here!</a></p>
+      <p>We are pleased to announce this <strong>second edition of GRaM</strong>, as an <strong>ICLR 2026 workshop</strong>. This year, we will have a focus on <strong>scale and simplicity</strong>. We open three tracks: paper tracks, blogposts track and a new competition track! Have a look at our <a href="./archive.html">previous edition</a>. More updates to come soon...</p>
 
-      <p><span style="color: rgb(255, 136, 0);">Accepted blogposts and tutorials</span> can be found <a href="https://gram-blogposts.github.io/">here!</a></p>
+      <h2 id="motivation">Deadlines</h2>
+      <ul>
+        <li><strong>Paper submission (tentative):</strong> January 30, 2026 (AoE)</li>
+        <li><strong>Paper acceptance notification:</strong> March 1st, 2026 (AoE)</li>
+        <li><strong>Workshop dates:</strong> April 25-26, 2026 (exact date to be announced)</li>
+      </ul>
+
 
       <h2 id="motivation">Motivation</h2>
 
       <p>
-        By recognizing that nearly all data is rooted in our physical world, and thus inherently grounded in geometry and physics, it becomes evident that representation learning should preserve this grounding in order to remain meaningful. For example, preserving group transformation laws and symmetries through equivariant layers is crucial in domains such as computational physics, chemistry, robotics, and medical imaging, and leads to effective and generalizable architectures and improved data efficiency. Similarly, in generative models applied to non-Euclidean data spaces, maintaining the manifold structure is essential in order to obtain meaningful samples. Therefore, this workshop focuses on the principle of <em>grounding in geometry</em>, which we define as follows:
+        Many real-world datasets have geometric structure, but most ML methods ignore such structure, and treat all inputs as plain vectors. <strong>GRaM</strong> is a workshop about <strong>grounding</strong> models in geometry, using ideas from group equivariance to non-Euclidean metrics, to build better, more interpretable representations and generative models.
       </p>
 
       <blockquote>
-        <p><span style="color: rgb(255, 136, 0);">A representation, method, or theory is grounded in geometry if it can be amenable to geometric reasoning, that is, it abides by the mathematics of geometry and physics.</span></p>
+        <p><span style="color: rgb(255, 136, 0);">An approach is geometrically grounded if it respects the geometric structure of the problem domain and supports geometric reasoning.</span></p>
       </blockquote>
+
+      <p>
+        For this second edition, we aim to explore the relevance of geometric methods, particularly in the context of large models, focusing on the theme of <strong>scale and simplicity</strong>.
+      </p>
 
       <h2 id="topics">Topics</h2>
       <p>
         We solicit submissions that present theoretical research, methodologies, applications, insightful analysis, and even open problems, within the following topics (list not exhaustive):
       </p>
       <ul>
-        <li><strong>Structure-preserving learning</strong>
+        <li><strong>Preserving data geometry</strong>
           <ul>
-            <li><span style="color: rgb(255, 136, 0);">Preservation of symmetries</span>; E.g., through equivariant operators.</li>
-            <li><span style="color: rgb(255, 136, 0);">Dynamical systems on manifolds</span>; Representation learning and generative modeling using ordinary, stochastic, and differential equations (ODEs, SDEs, PDEs) on manifolds. </li>
-            <li><span style="color: rgb(255, 136, 0);">Computing with geometric representations</span>; Such as the processing of multi-vectors using geometric algebra, steerable vectors using Clebsch-Gordan products, and hyperbolic features using Fréchet means.</li>
+            <li><span style="color: rgb(255, 136, 0);">Preservation of symmetries</span>; e.g., through equivariant operators.</li>
+            <li><span style="color: rgb(255, 136, 0);">Geometric representation systems</span>; e.g., encoding data in intrinsically structured forms via Clifford algebras or steerable vectors with Clebsch-Gordan products.</li>
+            <li><span style="color: rgb(255, 136, 0);">Isometric latent mappings</span>; e.g., learning latent representations of the data via pullback metrics.</li>
           </ul>
         </li>
-        <li><strong>Structure-inducing learning</strong>
+        <li><strong>Inducing geometric structure</strong>
           <ul>
-            <li><span style="color: rgb(255, 136, 0);">Self-supervised learning</span>; E.g., learning to embed data in geometric latent spaces through (geodesic) distance-based similarity metrics.</li>
-            <li><span style="color: rgb(255, 136, 0);">Geometric priors</span>; E.g., soft constraints on model weights.</li>
-            <li><span style="color: rgb(255, 136, 0);">Physics-Informed Neural Networks</span>; E.g., inducing the structure of established physical and geometric laws into neural networks through dedicated losses.</li>
+            <li><span style="color: rgb(255, 136, 0);">Geometric priors</span>; e.g., introducing curvature, symmetry, or topological constraints through explicit regularization.</li>
+            <li><span style="color: rgb(255, 136, 0);">non-Euclidean generative models</span>; e.g., extending diffusion models or flow matching models to non-Euclidean domains with a predefined metric.</li>
+            <li><span style="color: rgb(255, 136, 0);">Metric-preserving embeddings</span>; e.g., learning latent spaces where intrinsic geodesic distances are mapped to Euclidean ones.</li>
           </ul>
         </li>
-        <li><strong>Generative modeling and density estimation</strong>
+        <li><strong>Geometry in theoretical analysis</strong>
           <ul>
-            <li><span style="color: rgb(255, 136, 0);">Geometric latent variable models</span>; I.e., the use of latent variables that live in a manifold.</li>
-            <li><span style="color: rgb(255, 136, 0);">New Methods</span>; And adaptations of methods capable of:</li>
-            <li><span style="color: rgb(255, 136, 0);">Generating geometric objects</span>; E.g., generating atomic point clouds or shapes.</li>
-            <li><span style="color: rgb(255, 136, 0);">Generating fields over manifolds</span>; E.g., generating vector fields or spherical signals.</li>
+            <li><span style="color: rgb(255, 136, 0);">Data and latent geometry</span> · Gaining insights on the data manifold, statistical manifold or the latent variables using geometric tools.</li>
+            <li><span style="color: rgb(255, 136, 0);">Loss landscape geometry</span> · Viewing parameters and their optimization trajectory as lying on a manifold, enabling analysis of curvature, critical points, and generalization.</li>
+            <li><span style="color: rgb(255, 136, 0);">Theoretical frameworks</span> · Using differential geometry, algebraic geometry, or group theory to provide a generalizing perspective on generation or representation learning.</li>
+            <li><span style="color: rgb(255, 136, 0);">Open problems</span> · Identifying and addressing unresolved questions and challenges that lie at the intersection of geometry and learning.</li>
           </ul>
         </li>
-        <li><strong>Grounding in theory</strong>
+        <li><strong>Scale and Simplicity</strong>
           <ul>
-            <li><span style="color: rgb(255, 136, 0);">Theoretical frameworks</span>; Unifying analyses and formulations that provide a generalizing perspective on deep learning paradigms.</li>
-            <li><span style="color: rgb(255, 136, 0);">Open problems</span>; Identifying and addressing unresolved questions and challenges that lie at the intersection of geometry and learning</li>
+            <li><span style="color: rgb(255, 136, 0);">Geometry at scale</span> · Does equivariance retain value in large-scale models?</li>
+            <li><span style="color: rgb(255, 136, 0);">Redundancy and minimality</span> · Evaluating when geometric structure is essential versus when simpler architectures suffice.</li>
+            <li><span style="color: rgb(255, 136, 0);">Challenging assumptions</span> · Reporting negative results or limitations of geometric methods to guide future development.</li>
           </ul>
         </li>
       </ul>
 
-
+<!-- 
       <h2 id="cfp">Call for papers</h2>
       <p>The workshop solicits submissions to the</p>
       <ul>
@@ -129,29 +143,47 @@
       <p>If you would like to review for our workshop, please signup <a href="https://docs.google.com/forms/d/e/1FAIpQLSfCEkzvuCyRFTSZQZ97zvohLddXTh8vbd9gzki_C5NRfFH50A/viewform?usp=sf_link">here</a>.</p>
 <h2>Contact</h2>
       <p> If you have any questions, please feel free to email us at <a href="mailto:organizers@gram-workshop.org">organizers AT gram-workshop DOT org </a> </p>
-      
+       -->
       
       
       <h2 id="organizers">Organizers</h2>
 
 <div class="wide-container">
-  <div class="organizers-container">
+  <!-- <div class="organizers-container">
     <div class="organizer big-organizer">
       <div class="organizer-header">
+
         <img src="assets/img/bio/sharvaree_vadgama.jpg" alt="Sharvaree Vadgama" class="organizer-photo big-photo">
         <strong>Sharvaree Vadgama</strong>
-      </div>
-      <div class="organizer-bio">
-        <p>Sharvaree Vadgama is a PhD student at Amsterdam Machine Learning Lab, University of Amsterdam. Her work is focused on learning representations primarily in the intersection of geometric deep learning and generative modeling. She was a co-organizer of Generative Modeling Summer School (GeMSS) 2023 as well as a co-organizer of Women in AI meetups (Amsterdam chapter).</p>
-      </div>
     </div>
     <div class="organizer big-organizer">
       <div class="organizer-header">
         <img src="assets/img/bio/erik_bekkers.jpg" alt="Erik Bekkers" class="organizer-photo big-photo">
         <strong>Erik Bekkers</strong>
       </div>
-      <div class="organizer-bio">
-        <p>Erik Bekkers is an assistant professor at the Machine Learning Lab of the University of Amsterdam (AMLab, UvA) and an ELLIS Scholar in the program on Geometric Deep Learning. His research is equivariant deep learning and computational and representation efficiency through sparse, adaptive, and geometric learning mechanisms. He has organized several international workshops and conference sessions (e.g., GeoMedIA'22, GSI '21 and '23, two ELLIS workshops on GDL). He chairs the board of examiners for the Master AI at UvA. Erik received a VENI personal research grant (Dutch Research Council) and the Young Scientist Award at MICCAI 2018.</p>
+    </div>
+  </div> -->
+
+  <div class="organizers-container">
+    <div class="organizer">
+      <div class="organizer-header">
+        <img src="assets/img/bio/alison_pouplin.jpeg" alt="Alison Pouplin" class="organizer-photo">
+        <strong>Alison Pouplin</strong>
+        <div class="organizer-affiliation">Bayer</div>
+      </div>
+    </div>
+    <div class="organizer">
+      <div class="organizer-header">
+        <img src="assets/img/bio/sharvaree_vadgama.jpg" alt="Sharvaree Vadgama" class="organizer-photo">
+        <strong>Sharvaree Vadgama</strong>
+        <div class="organizer-affiliation">Universiteit van Amsterdam</div>
+      </div>
+    </div>
+    <div class="organizer">
+      <div class="organizer-header">
+        <img src="assets/img/bio/erik_bekkers.jpg" alt="Erik Bekkers" class="organizer-photo">
+        <strong>Erik Bekkers</strong>
+        <div class="organizer-affiliation">Universiteit van Amsterdam</div>
       </div>
     </div>
   </div>
@@ -159,38 +191,30 @@
   <div class="organizers-container">
     <div class="organizer">
       <div class="organizer-header">
-        <img src="assets/img/bio/alison_pouplin.jpg" alt="Alison Pouplin" class="organizer-photo">
-        <strong>Alison Pouplin</strong>
-      </div>
-      <div class="organizer-bio">
-        <p>Alison Pouplin is a postdoctoral researcher at the Finnish Center of AI. Her current research interests involve geometric deep learning and generative modeling applied to drug discovery. She defended her PhD on differential geometric approaches to machine learning.</p>
+        <img src="assets/img/bio/oumar_kaba.jpg" alt="Sékou-Oumar Kaba" class="organizer-photo">
+        <strong>Sékou-Oumar Kaba</strong>
+        <div class="organizer-affiliation">McGill University and Mila</div>
       </div>
     </div>
     <div class="organizer">
       <div class="organizer-header">
         <img src="assets/img/bio/hannah_lawrence.jpg" alt="Hannah Lawrence" class="organizer-photo">
         <strong>Hannah Lawrence</strong>
-      </div>
-      <div class="organizer-bio">
-        <p>Hannah Lawrence is a PhD student at the Massachusetts Institute of Technology. Her research centers on symmetries in deep learning, aiming to both establish theoretical foundations and efficiently exploit equivariance in (often scientific) applications. She is also a co-founder of the Boston Symmetry Group, which organizes an annual workshop for Boston-area researchers in equivariance. She is supported by the Hertz Foundation and the National Science Foundation.</p>
+        <div class="organizer-affiliation">MIT</div>
       </div>
     </div>
     <div class="organizer">
       <div class="organizer-header">
-        <img src="assets/img/bio/oumar_kaba.jpg" alt="Sékou-Oumar Kaba" class="organizer-photo">
-        <strong>Sékou-Oumar Kaba</strong>
-      </div>
-      <div class="organizer-bio">
-        <p>Sékou-Oumar Kaba is a PhD student at McGill University and Mila, the Quebec AI institute. His interests are at the intersection of physics and deep learning, with a focus on symmetry and geometric inductive biases. In parallel, he also works on applications of machine learning to material science. He is a co-organizer of the Mila Quantum and AI meetups. He is a recipient of the DeepMind PhD scholarship.</p>
+        <img src="assets/img/bio/manuel_lecha.jpg" alt="Manuel Lecha" class="organizer-photo">
+        <strong>Manuel Lecha</strong>
+        <div class="organizer-affiliation">IIT and Oxford University</div>
       </div>
     </div>
     <div class="organizer">
       <div class="organizer-header">
-        <img src="assets/img/bio/robin_walters.jpg" alt="Robin Walters" class="organizer-photo">
-        <strong>Robin Walters</strong>
-      </div>
-      <div class="organizer-bio">
-        <p>Robin Walters is an assistant professor in the Khoury College of Computer Sciences at Northeastern University, where he leads the Geometric Learning Lab. Robin’s research seeks to develop a fundamental understanding of the role symmetry plays in deep learning and to exploit this to improve the generalization and data efficiency of deep learning methods. This includes designing equivariant neural networks, symmetry discovery methods, and creating a theory of symmetry for model parameters. He has applied these methods to improve models in domains with complex dynamics including climate science, transportation, and robotics.</p>
+        <img src="assets/img/bio/libby_baker.png" alt="Elizabeth (Libby) Baker" class="organizer-photo">
+        <strong>Elizabeth (Libby) Baker</strong>
+        <div class="organizer-affiliation">DTU Denmark</div>
       </div>
     </div>
   </div>
@@ -198,41 +222,27 @@
   <div class="organizers-container">
     <div class="organizer">
       <div class="organizer-header">
+        <img src="assets/img/bio/robin_walters.jpg" alt="Robin Walters" class="organizer-photo">
+        <strong>Robin Walters</strong>
+        <div class="organizer-affiliation">Northeastern University</div>
+      </div>
+    </div>
+    <div class="organizer">
+      <div class="organizer-header">
         <img src="assets/img/bio/jakub_tomzak.jpg" alt="Jakub Tomczak" class="organizer-photo">
         <strong>Jakub Tomczak</strong>
-      </div>
-      <div class="organizer-bio">
-        <p>Jakub M. Tomczak is an associate professor and the PI of the Generative AI group at the Eindhoven University of Technology (TU/e). His main research interests include deep generative modeling, deep learning, and Bayesian inference, with applications to image/text processing, Life Sciences, and Molecular Sciences. He serves as an action editor of "Transactions of Machine Learning Research", and an area chair of major AI conferences (e.g., NeurIPS, ICML, AISTATS). He was a co-organizer of the Neurosymbolic and Generative Models (NeSy-GeMs) Workshop at ICLR 2023. He will serve as a program chair of NeurIPS 2024. He is the author of the book entitled "Deep Generative Modeling", the first comprehensive book on Generative AI. He is also the founder of Amsterdam AI Solutions.</p>
+        <div class="organizer-affiliation">Chan Zuckerberg Initiative</div>
       </div>
     </div>
     <div class="organizer">
       <div class="organizer-header">
         <img src="assets/img/bio/stefanie_jegelka.jpg" alt="Stefanie Jegelka" class="organizer-photo">
         <strong>Stefanie Jegelka</strong>
-      </div>
-      <div class="organizer-bio">
-        <p>Stefanie Jegelka is an Associate Professor (on leave) at MIT EECS, and a Humboldt Professor at TU Munich. At MIT, she is a member of CSAIL, IDSS, and the Center for Statistics and Machine Learning. Before that, she was a postdoc in the AMPlab and computer vision group at UC Berkeley. Her research is in algorithmic machine learning and spans modeling, optimization algorithms, theory, and applications. In particular, her team has been working on exploiting mathematical structure for discrete and combinatorial machine learning problems, for robustness, and for scaling machine learning algorithms.</p>
-      </div>
-    </div>
-    <div class="organizer">
-      <div class="organizer-header">
-        <img src="assets/img/bio/henry_kvinge.jpeg" alt="Henry Kvinge" class="organizer-photo">
-        <strong>Henry Kvinge</strong>
-      </div>
-      <div class="organizer-bio">
-        <p>Henry Kvinge is a mathematician and machine learning researcher at Pacific Northwest National Lab and an Affiliate Assistant Professor in the University of Washington Mathematics Department. His research interests include representation learning, improving the robustness of deep learning models, and applications of topology, algebra, and geometry to machine learning and data science. He also works on applying machine learning to materials science. Henry organizes the 'Pacific Northwest Seminar on Topology, Algebra, and Geometry in Data Science' and is one of the founding organizers of the Topology, Algebra, and Geometry in Data Science series. His work has been featured in several articles, including recent papers on hidden activations in Stable Diffusion and the use of AI in advanced manufacturing processes.</p>
-      </div>
-    </div>
-    <div class="organizer">
-      <div class="organizer-header">
-        <img src="assets/img/bio/tegan_emerson.jpg" alt="Tegan Emerson" class="organizer-photo">
-        <strong>Tegan Emerson</strong>
-      </div>
-      <div class="organizer-bio">
-        <p>Tegan Emerson received her PhD in Mathematics from Colorado State University. She was a Jerome and Isabella Karle Distinguished Scholar Fellow in optical sciences at the Naval Research Laboratory from 2017-2019. In 2014 she had the honor of being a member of the American delegation at the Heidelberg Laureate Forum. Dr. Emerson is now a Senior Data Scientist and Team Leader in the Data Sciences and Analytics Group at Pacific Northwest Laboratory. In addition to her role at Pacific Northwest National Laboratories, Dr. Emerson also holds Joint Appointments as Affiliate Faculty in the Departments of Mathematics at Colorado State University and the University of Texas, El Paso. Her research interests include geometric and topological data analysis, dimensionality reduction, algorithms for image processing and materials science, deep learning, and optimization.</p>
+        <div class="organizer-affiliation">TU Munich</div>
       </div>
     </div>
   </div>
+
 
   <div class="organizers-container">
     <div class="organizer-placeholder"></div> <!-- Placeholder to maintain the layout -->
