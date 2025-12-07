@@ -342,11 +342,13 @@ a:hover { text-decoration: underline; }
 
 .organizer-placeholder { flex: 1 1 calc(25% - 5px); /* Same size as other organizers */ }
 
-.organizer-header { display: flex; flex-direction: column; align-items: center; margin-bottom: 50px; }
+.organizer-header { display: flex; flex-direction: column; align-items: center; margin-bottom: 50px; width: 100%; }
 
-.organizer-photo { width: 120px; height: 120px; border-radius: 50%; margin-bottom: 10px; object-fit: cover; }
+.organizer-photo { width: 120px; height: 120px; border-radius: 50%; margin-bottom: 10px; object-fit: cover; display: block; }
 
-.organizer-affiliation { font-weight: normal; font-size: 0.9em; text-align: center; margin-top: 5px; color: #666; }
+.organizer-header strong { display: block; text-align: center; margin-top: 5px; width: 100%; }
+
+.organizer-affiliation { font-weight: normal; font-size: 0.9em; text-align: center; margin-top: 5px; color: #666; display: block; width: 100%; }
 
 .big-photo { width: 120px; height: 120px; }
 
