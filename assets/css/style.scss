@@ -60,11 +60,12 @@ background-image:
 }
 
 .organizer-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
   margin-bottom: 50px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .organizer-photo {
@@ -73,14 +74,18 @@ background-image:
   border-radius: 50%;
   margin-bottom: 10px;
   object-fit: cover;
-  display: block;
+  display: block !important;
+  flex-shrink: 0;
+  max-width: 100%;
 }
 
 .organizer-header strong {
-  display: block;
+  display: block !important;
   text-align: center;
   margin-top: 5px;
   width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .organizer-affiliation {
@@ -89,8 +94,10 @@ background-image:
   text-align: center;
   margin-top: 5px;
   color: #666;
-  display: block;
+  display: block !important;
   width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .big-photo {
