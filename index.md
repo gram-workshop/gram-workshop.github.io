@@ -1,0 +1,203 @@
+---
+layout: home
+title: "GRaM Workshop @ ICLR 2026"
+description: "Workshop on Geometry-grounded Representation Learning and Generative Modeling"
+---
+
+<!-- <h2 id="motivation">(07/12/2025) Exciting news! GRAM is going to Rio!</h2> -->
+
+We are pleased to announce this **second edition of GRaM**, as an **ICLR 2026 workshop**. This year, we will have a focus on **scale and simplicity**. We open three tracks: paper tracks, blogposts track and a new competition track.
+
+## Deadlines
+
+- **Paper submission:** ~~February 5, 2026 (AoE)~~
+- **Paper notification:** March 1st, 2026 (AoE)
+- **Paper camera-ready:** March 11th, 2026 (AoE)
+- **Blogpost submission:** April 6, 2026 (AoE)
+- **Blogpost acceptance:** April 13, 2026 (AoE)
+- **Workshop dates:** April 25-26, 2026 (exact date to be announced)
+
+## Call for blogposts <small>(<a href="https://gram-blogposts.github.io/2026/about/">Submit a blog post</a>)</small>
+
+As in previous editions, we also invite submissions to our blog post track. We welcome blog posts in the ICLR Distill format that aim to communicate ideas clearly and accessibly. Submission guidelines are available on the website: [Call for Blog Posts](https://gram-blogposts.github.io/2026/about/). You can also explore [blog posts from GRAM 2024](https://gram-blogposts.github.io/2024/) for examples.
+
+## Call for Papers <small>(<a href="https://openreview.net/group?id=ICLR.cc/2026/Workshop/GRaM">Submit via OpenReview</a>)</small>
+
+We welcome submissions to two complementary tracks. Page limits exclude references and appendix:
+
+- **Proceedings track:** Full papers (up to 8 pages) presenting complete research results. Accepted papers will be published in the workshop proceedings at PMLR.
+
+- **Tiny paper track (non-archival):** Short papers (up to 4 pages) intended for early ideas, ongoing work, new perspectives, or contributions that benefit from a lighter review and discussion-oriented format.
+
+Papers should be submitted on the dedicated Openreview submission page [ICLR 2026 Workshop GRaM](https://openreview.net/group?id=ICLR.cc/2026/Workshop/GRaM). Submissions require an OpenReview account (institutional email recommended).
+
+**Template files:** To prepare your submission, please use the following template [download link](assets/GRaM2026_template.zip).
+
+
+
+### Important information about the Tiny Papers
+
+Since 2025, ICLR has discontinued the separate "Tiny Papers" track, and is instead requiring each workshop to accept short (3–5 pages in ICLR format, exact page length to be determined by each workshop) paper submissions, with an eye towards inclusion; see [ICLR 2025 Call for Tiny Papers](https://iclr.cc/Conferences/2025/CallForTinyPapers) for a history of the ICLR tiny papers initiative. Authors of these papers will be earmarked for potential funding from ICLR, but need to submit a separate application for Financial Assistance that evaluates their eligibility. This application for Financial Assistance to attend ICLR 2026 will become available on [ICLR 2026](https://iclr.cc/Conferences/2026) at the beginning of February and close early March.
+
+## Motivation
+
+Many real-world datasets have geometric structure, but most ML methods ignore such structure, and treat all inputs as plain vectors. **GRaM** is a workshop about **grounding** models in geometry, using ideas from group equivariance to non-Euclidean metrics, to build better, more interpretable representations and generative models.
+
+> <span style="color: rgb(255, 136, 0);">An approach is geometrically grounded if it respects the geometric structure of the problem domain and supports geometric reasoning.</span>
+
+For this second edition, we aim to explore the relevance of geometric methods, particularly in the context of large models, focusing on the theme of **scale and simplicity**.
+
+## Topics
+
+We solicit submissions that present theoretical research, methodologies, applications, insightful analysis, and even open problems, within the following topics (list not exhaustive):
+
+- **Preserving data geometry**
+  - <span style="color: rgb(255, 136, 0);">Preservation of symmetries</span>; e.g., through equivariant operators.
+  - <span style="color: rgb(255, 136, 0);">Geometric representation systems</span>; e.g., encoding data in intrinsically structured forms via Clifford algebras or steerable vectors with Clebsch-Gordan products.
+  - <span style="color: rgb(255, 136, 0);">Isometric latent mappings</span>; e.g., learning latent representations of the data via pullback metrics.
+
+- **Inducing geometric structure**
+  - <span style="color: rgb(255, 136, 0);">Geometric priors</span>; e.g., introducing curvature, symmetry, or topological constraints through explicit regularization.
+  - <span style="color: rgb(255, 136, 0);">non-Euclidean generative models</span>; e.g., extending diffusion models or flow matching models to non-Euclidean domains with a predefined metric.
+  - <span style="color: rgb(255, 136, 0);">Metric-preserving embeddings</span>; e.g., learning latent spaces where intrinsic geodesic distances are mapped to Euclidean ones.
+
+- **Geometry in theoretical analysis**
+  - <span style="color: rgb(255, 136, 0);">Data and latent geometry</span> · Gaining insights on the data manifold, statistical manifold or the latent variables using geometric tools.
+  - <span style="color: rgb(255, 136, 0);">Loss landscape geometry</span> · Viewing parameters and their optimization trajectory as lying on a manifold, enabling analysis of curvature, critical points, and generalization.
+  - <span style="color: rgb(255, 136, 0);">Theoretical frameworks</span> · Using differential geometry, algebraic geometry, or group theory to provide a generalizing perspective on generation or representation learning.
+  - <span style="color: rgb(255, 136, 0);">Open problems</span> · Identifying and addressing unresolved questions and challenges that lie at the intersection of geometry and learning.
+
+- **Scale and Simplicity**
+  - <span style="color: rgb(255, 136, 0);">Geometry at scale</span> · Does equivariance retain value in large-scale models?
+  - <span style="color: rgb(255, 136, 0);">Redundancy and minimality</span> · Evaluating when geometric structure is essential versus when simpler architectures suffice.
+  - <span style="color: rgb(255, 136, 0);">Challenging assumptions</span> · Reporting negative results or limitations of geometric methods to guide future development.
+
+<!-- 
+## Call for papers
+The workshop solicits submissions to the
+- **Proceedings track**: 8 page paper submissions (excluding appendices and references). Submissions will be peer-reviewed. Accepted papers will be published in PMLR as part of our workshop proceedings.
+- **Extended abstract track**: 4 page paper submissions (excluding appendices and references). Submissions will be peer-reviewed. Accepted papers can be viewed on openreview.
+- **Blogpost track**: blog posts that have tutorial value and act as explainers for (previously) published papers or important topics in the field. In this track, we further encourage blog posts that present opinion pieces, open problems,etc in provided markdown format. Submissions will be peer-reviewed and accepted submissions will be hosted on GRaM wesbite.
+- **Tutorial track**: Tutorials with easy-to-use and understand code for topics of important to GRaM audience submitted as a collab file. Submissions will be peer-reviewed and accepted submissions will be hosted on GRaM website.
+- **TAG challenge**: We team up with [TAG](https://www.tagds.com/) and host a *ICML Topological Deep Learning Challenge 2024: Beyond the Graph Domain* challenge.
+
+## Reviewing for GRaM
+If you would like to review for our workshop, please signup [here](https://docs.google.com/forms/d/e/1FAIpQLSfCEkzvuCyRFTSZQZ97zvohLddXTh8vbd9gzki_C5NRfFH50A/viewform?usp=sf_link).
+
+## Contact
+If you have any questions, please feel free to email us at [organizers AT gram-workshop DOT org](mailto:organizers@gram-workshop.org)
+-->
+
+## Organizers
+
+<div class="wide-container">
+<!-- <div class="organizers-container">
+<div class="organizer big-organizer">
+  <div class="organizer-header">
+    <img src="assets/img/bio/sharvaree_vadgama.jpg" alt="Sharvaree Vadgama" class="organizer-photo big-photo">
+    <strong>Sharvaree Vadgama</strong>
+</div>
+<div class="organizer big-organizer">
+  <div class="organizer-header">
+    <img src="assets/img/bio/erik_bekkers.jpg" alt="Erik Bekkers" class="organizer-photo big-photo">
+    <strong>Erik Bekkers</strong>
+  </div>
+</div>
+</div> -->
+
+<div class="organizers-container">
+    <div class="organizer">
+        <div class="organizer-header">
+            <img src="assets/img/bio/alison_pouplin.jpeg" alt="Alison Pouplin" class="organizer-photo">
+            <strong>Alison Pouplin</strong>
+            <div class="organizer-affiliation">Bayer</div>
+        </div>
+    </div>
+    <div class="organizer">
+        <div class="organizer-header">
+            <img src="assets/img/bio/sharvaree_vadgama.jpg" alt="Sharvaree Vadgama" class="organizer-photo">
+            <strong>Sharvaree Vadgama</strong>
+            <div class="organizer-affiliation">Universiteit van Amsterdam</div>
+        </div>
+    </div>
+    <div class="organizer">
+        <div class="organizer-header">
+            <img src="assets/img/bio/erik_bekkers.jpg" alt="Erik Bekkers" class="organizer-photo">
+            <strong>Erik Bekkers</strong>
+            <div class="organizer-affiliation">Universiteit van Amsterdam</div>
+        </div>
+    </div>
+</div>
+
+<div class="organizers-container">
+    <div class="organizer">
+        <div class="organizer-header">
+            <img src="assets/img/bio/oumar_kaba.jpg" alt="Sékou-Oumar Kaba" class="organizer-photo">
+            <strong>Sékou-Oumar Kaba</strong>
+            <div class="organizer-affiliation">McGill University and Mila</div>
+        </div>
+    </div>
+    <div class="organizer">
+        <div class="organizer-header">
+            <img src="assets/img/bio/hannah_lawrence.jpg" alt="Hannah Lawrence" class="organizer-photo">
+            <strong>Hannah Lawrence</strong>
+            <div class="organizer-affiliation">MIT</div>
+        </div>
+    </div>
+    <div class="organizer">
+        <div class="organizer-header">
+            <img src="assets/img/bio/manuel_lecha.jpg" alt="Manuel Lecha" class="organizer-photo">
+            <strong>Manuel Lecha</strong>
+            <div class="organizer-affiliation">IIT and Oxford University</div>
+        </div>
+    </div>
+    <div class="organizer">
+        <div class="organizer-header">
+            <img src="assets/img/bio/libby_baker.png" alt="Elizabeth (Libby) Baker" class="organizer-photo">
+            <strong>Elizabeth (Libby) Baker</strong>
+            <div class="organizer-affiliation">DTU Denmark</div>
+        </div>
+    </div>
+</div>
+
+<div class="organizers-container">
+    <div class="organizer">
+        <div class="organizer-header">
+            <img src="assets/img/bio/julian_suk.jpg" alt="Julian Suk" class="organizer-photo">
+            <strong>Julian Suk</strong>
+            <div class="organizer-affiliation">TU Munich</div>
+        </div>
+    </div>
+    <div class="organizer">
+        <div class="organizer-header">
+            <img src="assets/img/bio/robin_walters.jpg" alt="Robin Walters" class="organizer-photo">
+            <strong>Robin Walters</strong>
+            <div class="organizer-affiliation">Northeastern University</div>
+        </div>
+    </div>
+    <div class="organizer">
+        <div class="organizer-header">
+            <img src="assets/img/bio/jakub_tomzak.jpg" alt="Jakub Tomczak" class="organizer-photo">
+            <strong>Jakub Tomczak</strong>
+            <div class="organizer-affiliation">Chan Zuckerberg Initiative</div>
+        </div>
+    </div>
+    <div class="organizer">
+        <div class="organizer-header">
+            <img src="assets/img/bio/stefanie_jegelka.jpg" alt="Stefanie Jegelka" class="organizer-photo">
+            <strong>Stefanie Jegelka</strong>
+            <div class="organizer-affiliation">TU Munich</div>
+        </div>
+    </div>
+</div>
+
+<div class="organizers-container">
+    <div class="organizer-placeholder"></div> <!-- Placeholder to maintain the layout -->
+    <div class="organizer-placeholder"></div> <!-- Placeholder to maintain the layout -->
+</div>
+</div>
+
+<!-- <footer class="site-footer"> -->
+<!-- <span class="site-footer-owner"><a href="https://github.com/ebekkers/website-testing">website-testing</a> is maintained by <a href="https://github.com/ebekkers">ebekkers</a>.</span> -->
+<!-- <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span> -->
+<!-- </footer> -->
