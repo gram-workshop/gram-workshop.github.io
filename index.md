@@ -10,7 +10,8 @@ description: "Workshop on Geometry-grounded Representation Learning and Generati
   <a href="https://gram-blogposts.github.io/2026/about/" style="color: white; text-decoration: underline;">Submit to our blogpost track!</a> Deadline: April 6, 2026
 </div>
 
-We are pleased to announce this **second edition of GRaM**, as an **ICLR 2026 workshop**. This year, we will have a focus on **scale and simplicity**. We open three tracks: paper tracks, blogposts track and a new competition track.
+We are pleased to announce this **second edition of GRaM**, as an **ICLR 2026 workshop**. This year, we will have a focus on **scale and simplicity**. We open three tracks: paper tracks, blogposts track and a new competition track. You can find us on the official [ICLR webpage](https://iclr.cc/virtual/2026/workshop/10000809).
+
 
 ## Deadlines
 
