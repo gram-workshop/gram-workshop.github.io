@@ -6,24 +6,30 @@ description: "Workshop on Geometry-grounded Representation Learning and Generati
 
 <!-- <h2 id="motivation">(07/12/2025) Exciting news! GRAM is going to Rio!</h2> -->
 
+<div style="background-color: #155799; color: white; text-align: center; padding: 16px 20px; border-radius: 8px; margin-bottom: 20px; font-size: 1.2em; font-weight: bold;">
+  <a href="https://gram-blogposts.github.io/2026/about/" style="color: white; text-decoration: underline;">Submit to our blogpost track!</a> Deadline: April 6, 2026
+</div>
+
 We are pleased to announce this **second edition of GRaM**, as an **ICLR 2026 workshop**. This year, we will have a focus on **scale and simplicity**. We open three tracks: paper tracks, blogposts track and a new competition track.
 
 ## Deadlines
 
 - **Paper submission:** ~~February 5, 2026 (AoE)~~
-- **Paper notification:** March 1st, 2026 (AoE)
-- **Paper camera-ready:** March 11th, 2026 (AoE)
+- **Paper notification:** ~~March 1st, 2026 (AoE)~~
+- **Paper camera-ready:** ~~March 11th, 2026 (AoE)~~
 - **Blogpost submission:** April 6, 2026 (AoE)
 - **Blogpost acceptance:** April 13, 2026 (AoE)
-- **Workshop dates:** April 25-26, 2026 (exact date to be announced)
+- **Workshop dates:** April 26, 2026
 
 ## Call for blogposts <small>(<a href="https://gram-blogposts.github.io/2026/about/">Submit a blog post</a>)</small>
 
-As in previous editions, we also invite submissions to our blog post track. We welcome blog posts in the ICLR Distill format that aim to communicate ideas clearly and accessibly. Submission guidelines are available on the website: [Call for Blog Posts](https://gram-blogposts.github.io/2026/about/). You can also explore [blog posts from GRAM 2024](https://gram-blogposts.github.io/2024/) for examples.
+As in previous editions, we also invite **submissions to our blogpost track**. We welcome blog posts in the ICLR Distill format that aim to communicate ideas clearly and accessibly. Submission guidelines are available on the website: [Call for Blog Posts](https://gram-blogposts.github.io/2026/about/). You can also explore [blog posts from GRAM 2024](https://gram-blogposts.github.io/2024/) for examples.
 
-## Call for Papers <small>(<a href="https://openreview.net/group?id=ICLR.cc/2026/Workshop/GRaM">Submit via OpenReview</a>)</small>
+## Accepted Papers <small>(<a href="https://openreview.net/group?id=ICLR.cc/2026/Workshop/GRaM">OpenReview</a>)</small>
 
-We welcome submissions to two complementary tracks. Page limits exclude references and appendix:
+The call for papers is closed. You can see all the accepted papers on the openreview page [ICLR 2026 Workshop GRaM](https://openreview.net/group?id=ICLR.cc/2026/Workshop/GRaM). **Congratulations to all the authors!**
+
+<!-- We welcome submissions to two complementary tracks. Page limits exclude references and appendix:
 
 - **Proceedings track:** Full papers (up to 8 pages) presenting complete research results. Accepted papers will be published in the workshop proceedings at PMLR.
 
@@ -32,12 +38,12 @@ We welcome submissions to two complementary tracks. Page limits exclude referenc
 Papers should be submitted on the dedicated Openreview submission page [ICLR 2026 Workshop GRaM](https://openreview.net/group?id=ICLR.cc/2026/Workshop/GRaM). Submissions require an OpenReview account (institutional email recommended).
 
 **Template files:** To prepare your submission, please use the following template [download link](assets/GRaM2026_template.zip).
+ -->
 
 
+<!-- ### Important information about the Tiny Papers
 
-### Important information about the Tiny Papers
-
-Since 2025, ICLR has discontinued the separate "Tiny Papers" track, and is instead requiring each workshop to accept short (3–5 pages in ICLR format, exact page length to be determined by each workshop) paper submissions, with an eye towards inclusion; see [ICLR 2025 Call for Tiny Papers](https://iclr.cc/Conferences/2025/CallForTinyPapers) for a history of the ICLR tiny papers initiative. Authors of these papers will be earmarked for potential funding from ICLR, but need to submit a separate application for Financial Assistance that evaluates their eligibility. This application for Financial Assistance to attend ICLR 2026 will become available on [ICLR 2026](https://iclr.cc/Conferences/2026) at the beginning of February and close early March.
+Since 2025, ICLR has discontinued the separate "Tiny Papers" track, and is instead requiring each workshop to accept short (3–5 pages in ICLR format, exact page length to be determined by each workshop) paper submissions, with an eye towards inclusion; see [ICLR 2025 Call for Tiny Papers](https://iclr.cc/Conferences/2025/CallForTinyPapers) for a history of the ICLR tiny papers initiative. Authors of these papers will be earmarked for potential funding from ICLR, but need to submit a separate application for Financial Assistance that evaluates their eligibility. This application for Financial Assistance to attend ICLR 2026 will become available on [ICLR 2026](https://iclr.cc/Conferences/2026) at the beginning of February and close early March. -->
 
 ## Motivation
 
@@ -88,6 +94,22 @@ If you would like to review for our workshop, please signup [here](https://docs.
 If you have any questions, please feel free to email us at [organizers AT gram-workshop DOT org](mailto:organizers@gram-workshop.org)
 -->
 
+## Area Chairs
+
+We would like to thank our Area Chairs for their invaluable help with the review process:
+
+- **Elizabeth Baker**, DTU Denmark
+- **Erik Bekkers**, Universiteit van Amsterdam
+- **Samuel Fadel**, DTU Denmark
+- **Sékou-Oumar Kaba**, McGill University and Mila
+- **Hannah Lawrence**, MIT
+- **Alison Pouplin**, Bayer
+- **Behrooz Tahmasebi**, Harvard University
+- **Shubhendu Trivedi**, DeepMind
+- **Sharvaree Vadgama**, UC San Diego
+- **Robin Walters**, Northeastern University
+- **Bo Zhao**, UC San Diego
+
 ## Organizers
 
 <div class="wide-container">
@@ -117,7 +139,7 @@ If you have any questions, please feel free to email us at [organizers AT gram-w
         <div class="organizer-header">
             <img src="assets/img/bio/sharvaree_vadgama.jpg" alt="Sharvaree Vadgama" class="organizer-photo">
             <strong>Sharvaree Vadgama</strong>
-            <div class="organizer-affiliation">Universiteit van Amsterdam</div>
+            <div class="organizer-affiliation">UC San Diego</div>
         </div>
     </div>
     <div class="organizer">
