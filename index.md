@@ -6,8 +6,13 @@ description: "Workshop on Geometry-grounded Representation Learning and Generati
 
 <!-- <h2 id="motivation">(07/12/2025) Exciting news! GRAM is going to Rio!</h2> -->
 
-<div style="background-color: #155799; color: white; text-align: center; padding: 16px 20px; border-radius: 8px; margin-bottom: 20px; font-size: 1.2em; font-weight: bold;">
-  <a href="https://gram-blogposts.github.io/2026/about/" style="color: white; text-decoration: underline;">Submit to our blogpost track!</a> Deadline: April 6, 2026
+<div style="display: flex; gap: 16px; margin-bottom: 20px; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #155799; color: white; text-align: center; padding: 16px 20px; border-radius: 8px; font-size: 1.1em; font-weight: bold;">
+    <a href="https://gram-competition.github.io/" style="color: white; text-decoration: underline;">Submit to our competition track!</a> Deadline: April 22, 2026
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #155799; color: white; text-align: center; padding: 16px 20px; border-radius: 8px; font-size: 1.1em; font-weight: bold;">
+    <a href="https://gram-blogposts.github.io/2026/about/" style="color: white; text-decoration: underline;">Submit to our blogpost track!</a> Deadline: April 15, 2026
+  </div>
 </div>
 
 We are pleased to announce this **second edition of GRaM**, as an **ICLR 2026 workshop**. This year, we will have a focus on **scale and simplicity**. We open three tracks: paper tracks, blogposts track and a new competition track. You can find us on the official [ICLR webpage](https://iclr.cc/virtual/2026/workshop/10000809).
@@ -18,13 +23,17 @@ We are pleased to announce this **second edition of GRaM**, as an **ICLR 2026 wo
 - **Paper submission:** ~~February 5, 2026 (AoE)~~
 - **Paper notification:** ~~March 1st, 2026 (AoE)~~
 - **Paper camera-ready:** ~~March 11th, 2026 (AoE)~~
-- **Blogpost submission:** April 6, 2026 (AoE)
-- **Blogpost acceptance:** April 13, 2026 (AoE)
+- **Blogpost submission:** April 15, 2026 (AoE)
+- **Competition submission:** April 22, 2026 (AoE)
 - **Workshop dates:** April 26, 2026
 
-## Call for blogposts <small>(<a href="https://gram-blogposts.github.io/2026/about/">Submit a blog post</a>)</small>
+## Call for Blogposts <small>(<a href="https://gram-blogposts.github.io/2026/about/">Submit</a>)</small>
 
-As in previous editions, we also invite **submissions to our blogpost track**. We welcome blog posts in the ICLR Distill format that aim to communicate ideas clearly and accessibly. Submission guidelines are available on the website: [Call for Blog Posts](https://gram-blogposts.github.io/2026/about/). You can also explore [blog posts from GRAM 2024](https://gram-blogposts.github.io/2024/) for examples.
+We invite submissions to our **blogpost track**. We welcome blog posts in the ICLR Distill format that communicate ideas clearly and accessibly. See the full guidelines and submit on the [blogpost website](https://gram-blogposts.github.io/2026/about/), and explore [blog posts from GRaM 2024](https://gram-blogposts.github.io/2024/) for examples. **Deadline: April 15, 2026 (AoE).**
+
+## Call for Competition <small>(<a href="https://gram-competition.github.io/">Submit</a>)</small>
+
+We are hosting a **benchmark challenge** on transient airflow prediction over 3D geometries inspired by Formula 1 front wings, with simulation data provided by [BeyondMath](https://beyondmath.com/). Given a geometry and airflow at previous time points, predict the airflow at future time points. The winner receives the **MCML Award (500 € prize)**. All valid submissions will be published in the workshop proceedings with co-authorship. Submissions are made via pull requests — see the [competition website](https://gram-competition.github.io/) for details. **Deadline: April 22, 2026 (AoE).**
 
 ## Accepted Papers <small>(<a href="https://openreview.net/group?id=ICLR.cc/2026/Workshop/GRaM">OpenReview</a>)</small>
 
@@ -94,22 +103,6 @@ If you would like to review for our workshop, please signup [here](https://docs.
 ## Contact
 If you have any questions, please feel free to email us at [organizers AT gram-workshop DOT org](mailto:organizers@gram-workshop.org)
 -->
-
-## Area Chairs
-
-We would like to thank our Area Chairs for their invaluable help with the review process:
-
-- **Elizabeth Baker**, DTU Denmark
-- **Erik Bekkers**, Universiteit van Amsterdam
-- **Samuel Fadel**, DTU Denmark
-- **Sékou-Oumar Kaba**, McGill University and Mila
-- **Hannah Lawrence**, MIT
-- **Alison Pouplin**, Bayer
-- **Behrooz Tahmasebi**, Harvard University
-- **Shubhendu Trivedi**, DeepMind
-- **Sharvaree Vadgama**, UC San Diego
-- **Robin Walters**, Northeastern University
-- **Bo Zhao**, UC San Diego
 
 ## Organizers
 
@@ -219,6 +212,39 @@ We would like to thank our Area Chairs for their invaluable help with the review
     <div class="organizer-placeholder"></div> <!-- Placeholder to maintain the layout -->
 </div>
 </div>
+
+## Workshop Sponsor
+
+<div style="text-align: center; margin-top: 24px;">
+  <img src="assets/img/logos/NT_logo_black.svg" alt="New Theory" style="height: 60px; width: auto;">
+</div>
+
+## Competition Sponsors
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 48px; margin-top: 24px; flex-wrap: wrap;">
+  <img src="assets/img/logos/BeyondMath_Black.svg" alt="BeyondMath" style="height: 60px; width: auto;">
+  <img src="assets/img/logos/mcml.svg" alt="MCML" style="height: 60px; width: auto;">
+</div>
+
+## Acknowledgements
+
+<p style="text-align: justify;">We are grateful to <a href="https://www.newtheory.ai/">New Theory</a> for their generous financial support of the workshop. We also thank <a href="https://beyondmath.com/">BeyondMath</a> for creating and curating the incredible dataset powering our competition, with a special thanks to <strong>Gavin Seegolam</strong> (BeyondMath) and <strong>Julian Suk</strong> (Competition Area Chair) for making it happen. Finally, we thank <a href="https://mcml.ai/">MCML</a> for providing the competition winners with an award prize.</p>
+
+## Area Chairs
+
+We would like to thank our Area Chairs for their invaluable help with the review process:
+
+- **Elizabeth Baker**, DTU Denmark
+- **Erik Bekkers**, Universiteit van Amsterdam
+- **Samuel Fadel**, DTU Denmark
+- **Sékou-Oumar Kaba**, McGill University and Mila
+- **Hannah Lawrence**, MIT
+- **Alison Pouplin**, Bayer
+- **Behrooz Tahmasebi**, Harvard University
+- **Shubhendu Trivedi**, DeepMind
+- **Sharvaree Vadgama**, UC San Diego
+- **Robin Walters**, Northeastern University
+- **Bo Zhao**, UC San Diego
 
 <!-- <footer class="site-footer"> -->
 <!-- <span class="site-footer-owner"><a href="https://github.com/ebekkers/website-testing">website-testing</a> is maintained by <a href="https://github.com/ebekkers">ebekkers</a>.</span> -->

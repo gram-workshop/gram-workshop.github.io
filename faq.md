@@ -1,37 +1,33 @@
 ---
-layout: default
-title: FAQ
-description: Frequently asked questions
+layout: home
+title: "GRaM Workshop @ ICLR 2026 — FAQ"
+description: "Frequently Asked Questions"
 ---
 
 ## Frequently Asked Questions
-Here are a few most common question that we recieve:
 
-### Can I submit my Neurips paper to this workshop? 
-You could submit your neurips paper to the new extended abstract track and not for the Proceedings track as that requires at least 30% novelty on previously submitted/published work. You could also submit a blogpost on the same work.
- 
-### Where will the accepted paper be published?
-The accepted papers will be published in PMLR under GRaM workshop proceedings. 
+<!-- Add your questions below using the format shown. -->
 
-### Does the paper have to exactly 8-page?
-No, it doesn't. The main paper has to maximum page limit of 8, and then unlimited appendix pages. 
+### When and where is the workshop?
 
-### Does the blogpost be on a paper/papers?
-No. The blogpost can be on anything as long as it fits in on the topics listed in Call for Papers. It can be written on one or more papers, but also on a new direction, critique on exisitng methods, etc. 
+The GRaM Workshop will take place in Rio de Janeiro on **April 26, 2026**, as part of ICLR 2026.
 
-### Do accepted blogposts get to present in the poster-session?
-Yes, all accepted submissions: Papers, blogpost and tutorials get to present in the poster session.
+### How do I contact you?
 
-### Can I submit my accepted blogpost from ICLR 2024 to this workshop?
-Yes. We accepted previously accepted submissions in our Blogpost track. 
+You can reach us by email at [organizers@gram-workshop.org](mailto:organizers@gram-workshop.org).
 
-### Can I submit a blogpost on my own paper?
-Yes, you could totally submit a blogpost on your own work. 
+### What is the poster format for accepted papers?
 
-### Will there be travel awards for accepted submissions?  
-We plan to award travel awards for early stage researchers who not have enough funding to travel for the conference. Please fill this [ELLIS mobility grantforGRaM form](https://docs.google.com/forms/d/e/1FAIpQLSeQ5aHWrrR4ryBfDOh-PJ4Wa0GexSX2ZDuIu-pYj4xm9sfljw/viewform) and you will hear from us very soon. 
+Posters should be **portrait** orientation and sized **61 × 85 cm** (approximately 24 × 33 inches). Self-sticking posters are not allowed — poster tape will be provided by the conference. Please only use the approved tape.
 
-### Where can I get an invite letter to apply for my visa to attend ICML?
-If you need to apply for visa to attend ICML, please write to our organizers email id. 
+### Can accepted blogposts present as a poster?
+
+If space allows, accepted blogposts can present as a poster. You are welcome to write a blogpost on your own paper. The main criterion is to be as pedagogical as possible.
+
+### What are the instructions for authors accepted to the PMLR proceedings?
+
+Authors of accepted papers for PMLR should have received instructions via email. We need to gather your paper in PDF format, a signed consent form, and your BibTeX entry. The PMLR proceedings will only be published after the workshop, to include the workshop description and the competition track.
+
+
 
 [back](./)
