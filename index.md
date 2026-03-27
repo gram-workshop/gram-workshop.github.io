@@ -228,7 +228,7 @@ If you have any questions, please feel free to email us at [organizers AT gram-w
 
 ## Acknowledgements
 
-<p style="text-align: justify;">We are grateful to <a href="https://www.newtheory.ai/">New Theory</a> for their generous financial support of the workshop. We also thank <a href="https://beyondmath.com/">BeyondMath</a> for creating and curating the incredible dataset powering our competition, with a special thanks to <strong>Gavin Seegolam</strong> (BeyondMath) and <strong>Julian Suk</strong> (Competition Area Chair) for making it happen. Finally, we thank <a href="https://mcml.ai/">MCML</a> for providing the competition winners with an award prize.</p>
+<p style="text-align: justify;">We are grateful to <a href="https://www.newtheory.ai/">New Theory</a> for their generous financial support of the workshop. We also thank <a href="https://beyondmath.com/">BeyondMath</a> for creating and curating the incredible dataset powering our competition, with a special thanks to <strong>Gavin Seegoolam</strong> (BeyondMath) and <strong>Julian Suk</strong> (Competition Area Chair) for making it happen. Finally, we thank <a href="https://mcml.ai/">MCML</a> for providing the competition winners with an award prize.</p>
 
 ## Area Chairs
 
