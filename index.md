@@ -15,6 +15,10 @@ description: "Workshop on Geometry-grounded Representation Learning and Generati
   </div>
 </div>
 
+<div style="background-color: #e8f5e9; border-left: 4px solid #4caf50; padding: 16px 20px; border-radius: 8px; margin-bottom: 20px; font-size: 1.05em;">
+  <strong>🎉 New!</strong> Thanks to the generous sponsorship from <a href="https://www.newtheory.ai/">New Theory</a>, we have a few remaining <strong>travel grants</strong> and <strong>virtual passes</strong> to offer to authors of accepted papers. Priority will be given to first authors of accepted paper in difficult financial situations. Please reach out to us at <a href="mailto:organizers@gram-workshop.org">organizers@gram-workshop.org</a>.
+</div>
+
 We are pleased to announce this **second edition of GRaM**, as an **ICLR 2026 workshop**. This year, we will have a focus on **scale and simplicity**. We open three tracks: paper tracks, blogposts track and a new competition track. You can find us on the official [ICLR webpage](https://iclr.cc/virtual/2026/workshop/10000809).
 
 
@@ -226,7 +230,7 @@ If you have any questions, please feel free to email us at [organizers AT gram-w
   <img src="assets/img/logos/mcml.svg" alt="MCML" style="height: 60px; width: auto;">
 </div>
 
-## Acknowledgements
+## Acknowledgements to our co-organzing sponsors
 
 <p style="text-align: justify;">We are grateful to <a href="https://www.newtheory.ai/">New Theory</a> for their generous financial support of the workshop. We also thank <a href="https://beyondmath.com/">BeyondMath</a> for creating and curating the incredible dataset powering our competition, with a special thanks to <strong>Gavin Seegoolam</strong> (BeyondMath) and <strong>Julian Suk</strong> (Competition Area Chair) for making it happen. Finally, we thank <a href="https://mcml.ai/">MCML</a> for providing the competition winners with an award prize.</p>
 
