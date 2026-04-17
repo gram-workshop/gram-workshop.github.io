@@ -227,8 +227,9 @@ We are pleased to announce this **second edition of GRaM**, as an **ICLR 2026 wo
     <div class="program-content">
       <span class="program-tag panel">Panel Discussion</span>
       <div style="margin-top: 4px;">
-        With <a href="https://a1k12.github.io/">Aditi Krishnapriyan</a>, <a href="https://www.alextong.net/">Alexander Tong</a>, <a href="https://gabloa.github.io/">Gabriel Loaiza-Ganem</a>, <a href="https://argmin.xyz/">Jonas Köhler</a>, and <a href="https://www.cs.ox.ac.uk/people/michael.bronstein/">Michael Bronstein</a>.
-        <br><span style="color: #666;">On the question of scale and simplicity in the age of geometric deep learning, moderated by <a href="https://ebekkers.github.io/">Erik Bekkers</a>.</span>
+        <span class="program-title"> <a href="https://iclr.cc/virtual/2026/10019451">Do scale and simplicity make geometry obsolete, or more necessary than ever?</a> </span>
+        <br>With <a href="https://a1k12.github.io/">Aditi Krishnapriyan</a>, <a href="https://www.alextong.net/">Alexander Tong</a>, <a href="https://gabloa.github.io/">Gabriel Loaiza-Ganem</a>, <a href="https://argmin.xyz/">Jonas Köhler</a>, and <a href="https://www.cs.ox.ac.uk/people/michael.bronstein/">Michael Bronstein</a>. 
+        <br><span style="color: #666;">Moderated by <a href="https://ebekkers.github.io/">Erik Bekkers</a>.</span>
       </div>
     </div>
   </div>
