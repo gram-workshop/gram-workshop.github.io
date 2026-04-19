@@ -78,9 +78,9 @@ We are pleased to announce this **second edition of GRaM**, as an **ICLR 2026 wo
     </div>
     <div class="speaker-card">
         <div class="organizer-header">
-            <a href="https://argmin.xyz/"><img src="assets/img/invited26/jonas.jpeg" alt="Jonas Köhler" class="speaker-photo-square"></a>
-            <strong><a href="https://argmin.xyz/">Jonas Köhler</a></strong>
-            <div class="organizer-affiliation">CuspAI</div>
+            <a href="https://www.linkedin.com/in/max-welling-4a783910/?originalSubdomain=nl"><img src="assets/img/invited26/max.jpeg" alt="Max Welling" class="speaker-photo-square"></a>
+            <strong><a href="https://www.linkedin.com/in/max-welling-4a783910/?originalSubdomain=nl">Max Welling</a></strong>
+            <div class="organizer-affiliation">CuspAI and UvA</div>
         </div>
     </div>
     <div class="speaker-card">
@@ -228,7 +228,7 @@ We are pleased to announce this **second edition of GRaM**, as an **ICLR 2026 wo
       <span class="program-tag panel">Panel Discussion</span>
       <div style="margin-top: 4px;">
         <span class="program-title"> <a href="https://iclr.cc/virtual/2026/10019451">Do scale and simplicity make geometry obsolete, or more necessary than ever?</a> </span>
-        <br>With <a href="https://a1k12.github.io/">Aditi Krishnapriyan</a>, <a href="https://www.alextong.net/">Alexander Tong</a>, <a href="https://gabloa.github.io/">Gabriel Loaiza-Ganem</a>, <a href="https://argmin.xyz/">Jonas Köhler</a>, and <a href="https://www.cs.ox.ac.uk/people/michael.bronstein/">Michael Bronstein</a>. 
+        <br>With <a href="https://a1k12.github.io/">Aditi Krishnapriyan</a>, <a href="https://www.alextong.net/">Alexander Tong</a>, <a href="https://gabloa.github.io/">Gabriel Loaiza-Ganem</a>, <a href="https://www.linkedin.com/in/max-welling-4a783910/?originalSubdomain=nl">Max Welling</a>, and <a href="https://www.cs.ox.ac.uk/people/michael.bronstein/">Michael Bronstein</a>. 
         <br><span style="color: #666;">Moderated by <a href="https://ebekkers.github.io/">Erik Bekkers</a>.</span>
       </div>
     </div>
