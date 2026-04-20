@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>GRaM @ ICLR 2026 — Paper Awards Slide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Palette pulled from the website (assets/css/style.scss) and aligned
+       with slides/tracks_slide.html / slides/speakers_slide.html */
+    :root {
+      --bg: #ffffff;
+      --ink: #222222;
+      --muted: #555555;
+      --muted-2: #777777;
+      --line: #e5e7eb;
+      --line-2: #f0f0f0;
+
+      --brand: #155799;        /* primary blue */
+      --accent: #ff8800;       /* orange */
+
+      --duration-bg:    #f3f4f6;  --duration-ink:    #555555;
+      --contributed-bg: rgba(255, 136, 0, 0.15);  --contributed-ink: #b45f00;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      background: #d9dee3;
+      color: var(--ink);
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    /* 16:9 slide canvas, 1920×1080 */
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      margin: 24px auto;
+      background: var(--bg);
+      box-shadow: 0 8px 40px rgba(0,0,0,.15);
+      padding: 56px 96px 48px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Header */
+    .slide-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      border-bottom: 3px solid var(--brand);
+      padding-bottom: 16px;
+      margin-bottom: 28px;
+      flex-shrink: 0;
+    }
+    .slide-title {
+      font-size: 48px; font-weight: 800; letter-spacing: -0.3px; margin: 0;
+      color: var(--ink);
+    }
+    .slide-title .muted { color: var(--muted); font-weight: 600; }
+    .slide-sub { font-size: 22px; color: var(--muted); }
+
+    /* Intro line */
+    .intro {
+      font-size: 22px;
+      color: var(--muted);
+      margin: 0 0 26px 0;
+      line-height: 1.4;
+      flex-shrink: 0;
+    }
+    .intro strong { color: var(--ink); }
+
+    /* Two track groups stacked, equally filling the canvas */
+    .groups {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      min-height: 0;
+    }
+    .track-group {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+    .track-label {
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--brand);
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid var(--brand);
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+    .track-label .track-count {
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.4px;
+      font-size: 13px;
+    }
+
+    .awards {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+    .awards li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line-2);
+    }
+    .awards li:last-child { border-bottom: none; }
+
+    .paper-title {
+      font-size: 30px;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: -0.2px;
+      line-height: 1.25;
+    }
+    .paper-authors {
+      display: block;
+      font-size: 21px;
+      color: var(--muted);
+      line-height: 1.4;
+      margin-top: 8px;
+    }
+    .paper-authors strong { color: var(--ink); font-weight: 700; }
+
+    .paper-affiliation {
+      display: block;
+      font-size: 15px;
+      color: var(--muted-2);
+      font-style: italic;
+      line-height: 1.35;
+      margin-top: 4px;
+    }
+
+    /* Duration tag — mirrors .program-tag.duration on the site, scaled up */
+    .duration {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      padding: 3px 11px;
+      border-radius: 999px;
+      margin-left: 10px;
+      vertical-align: middle;
+      background: var(--duration-bg);
+      color: var(--duration-ink);
+    }
+
+    /* Footer */
+    .slide-footer {
+      flex-shrink: 0;
+      margin-top: 20px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .slide-footer .heart { color: var(--accent); }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* Print to PDF: export at exact slide size */
+    @page { size: 1920px 1080px; margin: 0; }
+    @media print {
+      html, body { background: #fff; }
+      .slide { margin: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="slide">
+
+  <div class="slide-header">
+    <div class="slide-title">Paper Awards <span class="muted">· GRaM @ ICLR 2026</span></div>
+    <div class="slide-sub">Acknowledging our contributed talks</div>
+  </div>
+
+  <p class="intro">
+    Five outstanding papers selected from <strong>133</strong> submissions —
+    presented as contributed talks during the morning session
+    (<strong>10:10 – 11:00</strong>).
+  </p>
+
+  <div class="groups">
+
+    <section class="track-group">
+      <div class="track-label">Proceedings Track</div>
+      <ul class="awards">
+        <li>
+          <a href="https://iclr.cc/virtual/2026/10019441"><span class="paper-title">The Affine Divergence: Aligning Activation Updates Beyond Normalisation</span></a>
+          <span class="paper-authors"><strong>George Bird</strong></span>
+          <span class="paper-affiliation">PhD student, Computer Science, University of Manchester</span>
+        </li>
+        <li>
+          <a href="https://iclr.cc/virtual/2026/10019442"><span class="paper-title">Algebraic priors for approximately equivariant networks</span></a>
+          <span class="paper-authors"><strong>Riccardo Ali</strong>, Pietro Liò, Jamie Vicary</span>
+          <span class="paper-affiliation">PhD student, University of Cambridge</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="track-group">
+      <div class="track-label">Tiny Paper Track</div>
+      <ul class="awards">
+        <li>
+          <a href="https://iclr.cc/virtual/2026/10019443"><span class="paper-title">The Geometry of Spectral Gradient Descent: Layerwise Criteria for SignSGD vs SpecSGD</span></a>
+          <span class="paper-authors"><strong>Laura Gomezjurado Gonzalez</strong>, Mahdi Ghaznavi, Hiroki Naganuma, Ioannis Mitliagkas</span>
+          <span class="paper-affiliation">Undergraduate student, Computer Science, Stanford University</span>
+        </li>
+        <li>
+          <a href="https://iclr.cc/virtual/2026/10019444"><span class="paper-title">mHC-lite: You Don't Need 20 Sinkhorn–Knopp Iterations</span></a>
+          <span class="paper-authors"><strong>Yongyi Yang</strong>, Jianyang Gao</span>
+          <span class="paper-affiliation">PhD student, CSE, University of Michigan – Ann Arbor</span>
+        </li>
+        <li>
+          <a href="https://iclr.cc/virtual/2026/10019445"><span class="paper-title">Riemannian Metric Matching for Scalable Geometric Modelling of Distributions</span></a>
+          <span class="paper-authors"><strong>Jacob Bamberger</strong>, Adam Gosztolai, Pierre Vandergheynst, Michael M. Bronstein, Iolo Jones</span>
+          <span class="paper-affiliation">PhD student, Department of Computer Science, University of Oxford</span>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+
+  <div class="slide-footer">
+    Made with <span class="heart">&#x2665;</span> by the GRaM organizing team &middot;
+    <a href="https://gram-workshop.github.io/">gram-workshop.github.io</a>
+  </div>
+
+</div>
+
+</body>
+</html>

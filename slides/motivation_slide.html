@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>GRaM @ ICLR 2026 — Motivation &amp; Topics Slide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --ink: #222222;
+      --muted: #555555;
+      --muted-2: #777777;
+      --line: #e5e7eb;
+      --line-2: #f0f0f0;
+
+      --brand: #155799;
+      --accent: #ff8800;
+
+      /* Column tints (light backgrounds) and matching header inks */
+      --col1-bg:  #e9f0f8;   --col1-ink: #155799;  /* blue  — preserve    */
+      --col2-bg:  #faf0e3;   --col2-ink: #b45f00;  /* orange — induce     */
+      --col3-bg:  #eef4f1;   --col3-ink: #2e8b57;  /* green  — theoretical*/
+      --col4-bg:  #f3ecfa;   --col4-ink: #6b46c1;  /* purple — scale      */
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      background: #d9dee3;
+      color: var(--ink);
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    /* 16:9 slide canvas, 1920×1080 */
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      margin: 24px auto;
+      background: var(--bg);
+      box-shadow: 0 8px 40px rgba(0,0,0,.15);
+      padding: 52px 80px 40px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Header */
+    .slide-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      border-bottom: 3px solid var(--brand);
+      padding-bottom: 14px;
+      margin-bottom: 22px;
+      flex-shrink: 0;
+    }
+    .slide-title {
+      font-size: 46px; font-weight: 800; letter-spacing: -0.3px; margin: 0;
+      color: var(--ink);
+    }
+    .slide-title .muted { color: var(--muted); font-weight: 600; }
+    .slide-sub { font-size: 20px; color: var(--muted); }
+
+    /* Hook + quote band */
+    .intro {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 36px;
+      align-items: center;
+      padding: 22px 4px 24px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 26px;
+      flex-shrink: 0;
+    }
+    .hook {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 1.28;
+      color: var(--ink);
+      letter-spacing: -0.2px;
+    }
+    .hook .kicker {
+      display: block;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--brand);
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      margin-bottom: 10px;
+    }
+    .hook .lead {
+      color: var(--accent);
+    }
+    .hook p.body {
+      font-size: 19px;
+      font-weight: 400;
+      color: var(--muted);
+      line-height: 1.55;
+      margin: 14px 0 0 0;
+      max-width: 780px;
+    }
+
+    .quote {
+      position: relative;
+      background: #fffaf2;
+      border: 1px solid rgba(255, 136, 0, 0.35);
+      border-left: 6px solid var(--accent);
+      border-radius: 12px;
+      padding: 22px 26px 22px 30px;
+    }
+    .quote .q-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      margin-bottom: 8px;
+    }
+    .quote .q-text {
+      font-size: 22px;
+      line-height: 1.4;
+      color: var(--ink);
+      font-weight: 600;
+      font-style: italic;
+    }
+    .quote .q-text .hl { color: var(--accent); font-style: normal; }
+
+    /* 4 columns */
+    .columns {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 24px;
+      flex: 1;
+      min-height: 0;
+      align-items: stretch;
+    }
+
+    .col {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      background: #ffffff;
+      min-height: 0;
+    }
+    .col-header {
+      padding: 18px 20px 14px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+    }
+    .col-1 .col-header { background: var(--col1-bg); }
+    .col-2 .col-header { background: var(--col2-bg); }
+    .col-3 .col-header { background: var(--col3-bg); }
+    .col-4 .col-header { background: var(--col4-bg); }
+
+    .icon {
+      flex-shrink: 0;
+      width: 52px; height: 52px;
+      border-radius: 12px;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .col-1 .icon svg { stroke: var(--col1-ink); }
+    .col-2 .icon svg { stroke: var(--col2-ink); }
+    .col-3 .icon svg { stroke: var(--col3-ink); }
+    .col-4 .icon svg { stroke: var(--col4-ink); }
+
+    .col-title {
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.2px;
+      line-height: 1.2;
+      margin: 0;
+      color: var(--ink);
+    }
+    .col-1 .col-title .chip,
+    .col-2 .col-title .chip,
+    .col-3 .col-title .chip,
+    .col-4 .col-title .chip {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+    .col-1 .col-title .chip { color: var(--col1-ink); }
+    .col-2 .col-title .chip { color: var(--col2-ink); }
+    .col-3 .col-title .chip { color: var(--col3-ink); }
+    .col-4 .col-title .chip { color: var(--col4-ink); }
+
+    .col-body {
+      padding: 18px 20px 18px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-height: 0;
+    }
+    .col-lede {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin: 0 0 4px 0;
+    }
+
+    .sub {
+      border-left: 3px solid rgba(0,0,0,0.08);
+      padding: 6px 0 6px 14px;
+    }
+    .col-1 .sub { border-left-color: rgba(21, 87, 153, 0.45); }
+    .col-2 .sub { border-left-color: rgba(255, 136, 0, 0.55); }
+    .col-3 .sub { border-left-color: rgba(46, 139, 87, 0.5); }
+    .col-4 .sub { border-left-color: rgba(107, 70, 193, 0.5); }
+
+    .sub .sub-title {
+      display: block;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 4px;
+    }
+    .col-1 .sub .sub-title { color: var(--col1-ink); }
+    .col-2 .sub .sub-title { color: var(--col2-ink); }
+    .col-3 .sub .sub-title { color: var(--col3-ink); }
+    .col-4 .sub .sub-title { color: var(--col4-ink); }
+
+    .sub .sub-eg {
+      display: block;
+      font-size: 14px;
+      line-height: 1.45;
+      color: var(--ink);
+    }
+    .sub .sub-eg em { color: var(--muted); font-style: italic; }
+
+    /* Footer */
+    .slide-footer {
+      flex-shrink: 0;
+      margin-top: 18px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .slide-footer .heart { color: var(--accent); }
+
+    a { color: inherit; text-decoration: none; }
+
+    @page { size: 1920px 1080px; margin: 0; }
+    @media print {
+      html, body { background: #fff; }
+      .slide { margin: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="slide">
+
+  <div class="slide-header">
+    <div class="slide-title">Motivation &amp; Topics <span class="muted">· GRaM @ ICLR 2026</span></div>
+    <div class="slide-sub">Grounding models in geometry · Scale &amp; Simplicity</div>
+  </div>
+
+  <!-- INTRO: hook (left) + defining quote (right) -->
+  <div class="intro">
+    <div class="hook">
+      <span class="kicker">Why GRaM</span>
+      <span class="lead">Data is inherently geometric.</span>
+      Real-world data originates from physical systems governed by geometric and physical laws — yet most ML methods treat it as plain vectors.
+      <p class="body">
+        Geometry offers guiding principles — from <strong>group equivariance</strong> to
+        <strong>non-Euclidean metrics</strong> — that preserve the symmetries and structure
+        inherent in data, enabling better, more interpretable representations and
+        generative models.
+      </p>
+    </div>
+
+    <div class="quote">
+      <div class="q-label">Our guiding principle</div>
+      <div class="q-text">
+        An approach is <span class="hl">geometrically grounded</span> if it respects the
+        geometric structure of the problem domain and supports
+        <span class="hl">geometric reasoning</span>.
+      </div>
+    </div>
+  </div>
+
+  <!-- FOUR TOPIC COLUMNS -->
+  <div class="columns">
+
+    <!-- COL 1 -->
+    <section class="col col-1">
+      <div class="col-header">
+        <div class="icon" aria-hidden="true">
+          <!-- Symmetry / reflection icon -->
+          <svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 3 V29"/>
+            <path d="M6 9 L13 16 L6 23 Z"/>
+            <path d="M26 9 L19 16 L26 23 Z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="col-title">Preserving data geometry
+            <span class="chip">Symmetries &amp; structure</span>
+          </h3>
+        </div>
+      </div>
+      <div class="col-body">
+        <p class="col-lede">Respect the structure that is already there.</p>
+
+        <div class="sub">
+          <span class="sub-title">Preservation of symmetries</span>
+          <span class="sub-eg"><em>e.g.,</em> equivariant operators and layers.</span>
+        </div>
+        <div class="sub">
+          <span class="sub-title">Geometric representation systems</span>
+          <span class="sub-eg"><em>e.g.,</em> Clifford algebras, steerable vectors with Clebsch–Gordan products.</span>
+        </div>
+        <div class="sub">
+          <span class="sub-title">Isometric latent mappings</span>
+          <span class="sub-eg"><em>e.g.,</em> latent representations via pullback metrics.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- COL 2 -->
+    <section class="col col-2">
+      <div class="col-header">
+        <div class="icon" aria-hidden="true">
+          <!-- Curved manifold icon -->
+          <svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 22 C 10 8, 22 8, 28 22"/>
+            <circle cx="10" cy="18" r="1.4" fill="currentColor" stroke="none"/>
+            <circle cx="16" cy="12.5" r="1.4" fill="currentColor" stroke="none"/>
+            <circle cx="22" cy="18" r="1.4" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="col-title">Inducing geometric structure
+            <span class="chip">Priors &amp; embeddings</span>
+          </h3>
+        </div>
+      </div>
+      <div class="col-body">
+        <p class="col-lede">Shape models with geometric inductive biases.</p>
+
+        <div class="sub">
+          <span class="sub-title">Geometric priors</span>
+          <span class="sub-eg"><em>e.g.,</em> curvature, symmetry, or topological constraints via explicit regularization.</span>
+        </div>
+        <div class="sub">
+          <span class="sub-title">Non-Euclidean generative models</span>
+          <span class="sub-eg"><em>e.g.,</em> diffusion or flow matching on domains with a predefined metric.</span>
+        </div>
+        <div class="sub">
+          <span class="sub-title">Metric-preserving embeddings</span>
+          <span class="sub-eg"><em>e.g.,</em> latent spaces where geodesic distances map to Euclidean ones.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- COL 3 -->
+    <section class="col col-3">
+      <div class="col-header">
+        <div class="icon" aria-hidden="true">
+          <!-- Contours / landscape icon -->
+          <svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="16" cy="16" rx="11" ry="6"/>
+            <ellipse cx="16" cy="16" rx="7" ry="3.5"/>
+            <circle cx="16" cy="16" r="1.5" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="col-title">Geometry in theoretical analysis
+            <span class="chip">Tools for understanding</span>
+          </h3>
+        </div>
+      </div>
+      <div class="col-body">
+        <p class="col-lede">Geometry as a lens for deep learning theory.</p>
+
+        <div class="sub">
+          <span class="sub-title">Data &amp; latent geometry</span>
+          <span class="sub-eg">Insights on the data manifold, statistical manifold, or latent variables.</span>
+        </div>
+        <div class="sub">
+          <span class="sub-title">Loss landscape geometry</span>
+          <span class="sub-eg">Curvature, critical points, and generalization along optimization trajectories.</span>
+        </div>
+        <div class="sub">
+          <span class="sub-title">Theoretical frameworks</span>
+          <span class="sub-eg">Differential geometry, algebraic geometry, group theory for generation &amp; representation.</span>
+        </div>
+        <div class="sub">
+          <span class="sub-title">Open problems</span>
+          <span class="sub-eg">Unresolved questions at the intersection of geometry and learning.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- COL 4 -->
+    <section class="col col-4">
+      <div class="col-header">
+        <div class="icon" aria-hidden="true">
+          <!-- Stacked scale icon -->
+          <svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="20" width="22" height="6" rx="1.2"/>
+            <rect x="8" y="13" width="16" height="6" rx="1.2"/>
+            <rect x="11" y="6" width="10" height="6" rx="1.2"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="col-title">Scale &amp; Simplicity
+            <span class="chip">2026 focus theme</span>
+          </h3>
+        </div>
+      </div>
+      <div class="col-body">
+        <p class="col-lede">When does geometry remain essential — at scale?</p>
+
+        <div class="sub">
+          <span class="sub-title">Geometry at scale</span>
+          <span class="sub-eg">Does equivariance retain value in large-scale models?</span>
+        </div>
+        <div class="sub">
+          <span class="sub-title">Redundancy and minimality</span>
+          <span class="sub-eg">When is geometric structure essential vs. when do simpler architectures suffice?</span>
+        </div>
+        <div class="sub">
+          <span class="sub-title">Challenging assumptions</span>
+          <span class="sub-eg">Negative results and limitations that guide future development.</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="slide-footer">
+    Made with <span class="heart">&#x2665;</span> by the GRaM organizing team &middot;
+    <a href="https://gram-workshop.github.io/">gram-workshop.github.io</a>
+  </div>
+
+</div>
+
+</body>
+</html>

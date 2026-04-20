@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>GRaM @ ICLR 2026 — Reviewers &amp; Area Chairs Slide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --ink: #222222;
+      --muted: #555555;
+      --brand: #155799;
+      --accent: #ff8800;
+      --panel-bg: rgba(21, 87, 153, 0.06);
+      --panel-border: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      background: #d9dee3;
+      color: var(--ink);
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      margin: 24px auto;
+      background: var(--bg);
+      box-shadow: 0 8px 40px rgba(0,0,0,.15);
+      padding: 44px 80px 40px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .slide-header {
+      border-bottom: 3px solid var(--brand);
+      padding-bottom: 14px;
+      margin-bottom: 20px;
+      flex-shrink: 0;
+    }
+    .slide-title {
+      font-size: 46px;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      margin: 0;
+      color: var(--ink);
+    }
+    .slide-title .muted { color: var(--muted); font-weight: 600; }
+
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      min-height: 0;
+    }
+
+    .block {
+      border: 1px solid var(--panel-border);
+      border-radius: 12px;
+      background: var(--panel-bg);
+      padding: 18px 22px 20px;
+      margin: 0 120px;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+
+    .block--reviewers {
+      flex: none;
+    }
+
+    .block--chairs {
+      flex-shrink: 0;
+    }
+
+    .block-title {
+      margin: 0 0 10px 0;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--brand);
+      letter-spacing: 0.2px;
+    }
+    .block-lead {
+      margin: 0 0 12px 0;
+      font-size: 17px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .name-columns {
+      column-count: 6;
+      column-gap: 24px;
+      font-size: 15.5px;
+      line-height: 1.45;
+      color: var(--ink);
+    }
+    .name-columns span {
+      display: block;
+      break-inside: avoid;
+      padding: 1.5px 0;
+    }
+
+    .chair-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      align-items: baseline;
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.55;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <header class="slide-header">
+      <h1 class="slide-title">Thank you <span class="muted">— GRaM @ ICLR 2026</span></h1>
+    </header>
+
+    <div class="content">
+      <section class="block block--reviewers" aria-labelledby="reviewers-heading">
+        <h2 id="reviewers-heading" class="block-title">Reviewers</h2>
+        <div class="name-columns">
+          <span>Aarav Lala</span>
+          <span>Abhiroop Chatterjee</span>
+          <span>Aishwarya Balwani</span>
+          <span>Alba Carballo-Castro</span>
+          <span>Alejandro García-Castellanos</span>
+          <span>Alexander Denker</span>
+          <span>Ali Baheri</span>
+          <span>Ana Luiza Tenorio</span>
+          <span>Andrew Bae</span>
+          <span>Andy Dimnaku</span>
+          <span>Anthony Kobanda</span>
+          <span>Arnaud Fickinger</span>
+          <span>Arnav Raj</span>
+          <span>Asif Khan</span>
+          <span>Aurelio Sulser</span>
+          <span>Axel Flinth</span>
+          <span>Behnaz Moradijamei</span>
+          <span>Behrooz Tahmasebi</span>
+          <span>Benjamin Gutteridge</span>
+          <span>Bertran Miquel-Oliver</span>
+          <span>Bo Zhao</span>
+          <span>Bryan Cheng</span>
+          <span>Caterina Graziani</span>
+          <span>César Miguel Valdez Córdova</span>
+          <span>Christian Koke</span>
+          <span>Chuyi Jiang</span>
+          <span>Cong Liu</span>
+          <span>David R Wessels</span>
+          <span>Dimitra Maoutsa</span>
+          <span>Duc Toan Nguyen</span>
+          <span>Edmond Cunningham</span>
+          <span>Elyssa Hofgard</span>
+          <span>Emma Cabalé</span>
+          <span>Eslam Abdelaleem</span>
+          <span>Federica Valeau</span>
+          <span>Ferran Hernandez Caralt</span>
+          <span>Floor Eijkelboom</span>
+          <span>Florian Grötschla</span>
+          <span>Gabriela Moisescu-Pareja</span>
+          <span>Gaurav Rohit Ghosal</span>
+          <span>Georg Bökman</span>
+          <span>George Bird</span>
+          <span>Georgios Arvanitidis</span>
+          <span>Geri Skenderi</span>
+          <span>Guillermo Ricardo Moreno Carrillo</span>
+          <span>Haitz Sáez de Ocáriz Borde</span>
+          <span>Han Xiao</span>
+          <span>Hangke Sui</span>
+          <span>Hansen Lillemark</span>
+          <span>Haorui Li</span>
+          <span>Hiroki Naganuma</span>
+          <span>Hong-Yi Wang</span>
+          <span>Hrittik Roy</span>
+          <span>Ishaan Watts</span>
+          <span>Jeffrey T. H. Wong</span>
+          <span>Jianke Yang</span>
+          <span>Jinwoo Kim</span>
+          <span>Jiyun Park</span>
+          <span>Johanna Marie Gegenfurtner</span>
+          <span>Julia Balla</span>
+          <span>Ka-Hei Hui</span>
+          <span>Kalyan Cherukuri</span>
+          <span>Karan Shah</span>
+          <span>Kaustubh S. Bukkapatnam</span>
+          <span>Kenji Fukumizu</span>
+          <span>Khang Ngo</span>
+          <span>Kusha Sareen</span>
+          <span>Laksh Patel</span>
+          <span>Lekha Patel</span>
+          <span>Leo Zhang</span>
+          <span>Manel Gil-Sorribes</span>
+          <span>Marco Montagna</span>
+          <span>Marcos M. Raimundo</span>
+          <span>Maria Esteban-Casadevall</span>
+          <span>Marimuthu Kalimuthu</span>
+          <span>Martin Carrasco</span>
+          <span>Max Beier</span>
+          <span>Maya Bechler-Speicher</span>
+          <span>Md Rifat Arefin</span>
+          <span>Michal Lewandowski</span>
+          <span>Miguel Alcocer Pérez</span>
+          <span>Mithil Shah</span>
+          <span>Mohamed Abdelrazek</span>
+          <span>Najwa Laabid</span>
+          <span>Neel N Shanbhag</span>
+          <span>Neel Tushar Shah</span>
+          <span>Nikita Kostin</span>
+          <span>Olga Zaghen</span>
+          <span>Oumaima Hourrane</span>
+          <span>Patryk Wielopolski</span>
+          <span>Pavlo Melnyk</span>
+          <span>Peter Zaika</span>
+          <span>Pratik Mazumder</span>
+          <span>Riccardo Ali</span>
+          <span>Sahar Rajabi</span>
+          <span>Saku Peltonen</span>
+          <span>Samuel G. Fadel</span>
+          <span>Samuel Ruiperez-Campillo</span>
+          <span>Satya Prakash Dash</span>
+          <span>Sayak Mukherjee</span>
+          <span>Sayan Kumar Chaki</span>
+          <span>Seonglae Cho</span>
+          <span>Shrey Goel</span>
+          <span>Siba Smarak Panigrahi</span>
+          <span>Stas Syrota</span>
+          <span>Tanush Ajay Shastry</span>
+          <span>Thomas Besnier</span>
+          <span>Ting-Ruen Wei</span>
+          <span>Tobias Cheung</span>
+          <span>Tobias Höppe</span>
+          <span>Vasily Ilin</span>
+          <span>Vedanth M. Nilabh</span>
+          <span>Xu Zhang</span>
+          <span>XuJiang Tang</span>
+          <span>Yize Zhao</span>
+          <span>Yongquan Shi</span>
+          <span>Yongyi Yang</span>
+          <span>Yoshihiro Maruyama</span>
+          <span>YuQing Xie</span>
+          <span>Yuxuan Chen</span>
+          <span>Yves Ruffenach</span>
+          <span>Zakhar Shumaylov</span>
+          <span>Zakk Heile</span>
+          <span>Zebang Shen</span>
+          <span>Zhenjie Zhao</span>
+          <span>Zichao Li</span>
+        </div>
+      </section>
+
+      <section class="block block--chairs" aria-labelledby="chairs-heading">
+        <h2 id="chairs-heading" class="block-title">Area chairs</h2>
+        <div class="chair-list">
+          <span>Alison Pouplin</span>
+          <span>Behrooz Tahmasebi</span>
+          <span>Bo Zhao</span>
+          <span>Erik Bekkers</span>
+          <span>Hannah Lawrence</span>
+          <span>Libby Baker</span>
+          <span>Oumar Kaba</span>
+          <span>Robin Walters</span>
+          <span>Samuel Fadel</span>
+          <span>Sharvaree Vadgama</span>
+          <span>Shubhendu Trivedi</span>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
