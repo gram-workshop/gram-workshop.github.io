@@ -100,7 +100,7 @@ We are pleased to announce this **second edition of GRaM**, as an **ICLR 2026 wo
 </div>
 </div>
 
-## Paper correlation map
+## Paper heatmap
 
 {% include papers26_map.html %}
 

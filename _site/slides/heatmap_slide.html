@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>GRaM @ ICLR 2026 — Accepted Papers Heatmap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Palette — same family as the other slides (tracks / speakers / reviewers) */
+    :root {
+      --bg: #ffffff;
+      --ink: #222222;
+      --muted: #555555;
+      --line: #e5e7eb;
+
+      --brand: #155799;        /* primary blue */
+      --accent: #ff8800;       /* orange */
+
+      /* Heatmap palette — mirrors _includes/papers26_map.html */
+      --gram-orange-deep: #b45f00;
+      --rule:             #e8dcc2;
+      --ink-heat:         #3a2f22;
+      --muted-heat:       #7a6a55;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      background: #d9dee3;
+      color: var(--ink);
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    /* 16:9 slide canvas, 1920x1080 */
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      margin: 24px auto;
+      background: var(--bg);
+      box-shadow: 0 8px 40px rgba(0,0,0,.15);
+      padding: 44px 80px 40px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .slide-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      border-bottom: 3px solid var(--brand);
+      padding-bottom: 14px;
+      margin-bottom: 28px;
+      flex-shrink: 0;
+    }
+    .slide-title {
+      font-size: 46px; font-weight: 800; letter-spacing: -0.3px; margin: 0;
+      color: var(--ink);
+    }
+    .slide-title .muted { color: var(--muted); font-weight: 600; }
+    .slide-sub { font-size: 20px; color: var(--muted); }
+
+    /* Heatmap centered in the remaining area */
+    .heatmap-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 0;
+    }
+
+    /* Static (non-interactive) heatmap table — scaled up for slide legibility */
+    .heatmap table {
+      border-collapse: separate;
+      border-spacing: 4px;
+      table-layout: fixed;
+      font-variant-numeric: tabular-nums;
+      color: var(--ink-heat);
+    }
+    .heatmap th, .heatmap td { padding: 0; text-align: center; }
+    .heatmap th.corner { background: transparent; width: 0; }
+    .heatmap th.row-tot-header {
+      background: transparent;
+      color: var(--gram-orange-deep);
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0 8px 8px;
+      vertical-align: bottom;
+    }
+    .heatmap th.col-header {
+      background: transparent;
+      color: var(--ink-heat);
+      font-weight: 700;
+      padding: 6px 4px;
+      width: 88px;
+      vertical-align: bottom;
+      border-top: 2px solid var(--gram-orange-deep);
+      line-height: 1.2;
+      font-size: 14px;
+      word-break: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+    .heatmap th.col-header .col-name { display: block; }
+    .heatmap th.col-header .col-count {
+      display: block; margin-top: 3px;
+      font-size: 13px;
+      color: var(--gram-orange-deep);
+      font-weight: 700;
+    }
+    .heatmap th.row-header {
+      background: transparent;
+      color: var(--ink-heat);
+      font-weight: 700;
+      font-size: 15px;
+      text-align: right;
+      padding: 4px 12px;
+      border-right: 2px solid var(--gram-orange-deep);
+      line-height: 1.2;
+      max-width: 200px;
+      white-space: normal;
+      overflow-wrap: break-word;
+    }
+    .heatmap td.row-tot {
+      background: transparent;
+      color: var(--gram-orange-deep);
+      font-weight: 700;
+      font-size: 15px;
+      width: 40px;
+      font-variant-numeric: tabular-nums;
+    }
+    .heatmap td.cell {
+      width: 88px; height: 88px;
+      font-weight: 700;
+      font-size: 20px;
+      border-radius: 3px;
+    }
+
+    /* Print to PDF: export at exact slide size */
+    @page { size: 1920px 1080px; margin: 0; }
+    @media print {
+      html, body { background: #fff; }
+      .slide { margin: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="slide">
+  <div class="slide-header">
+    <div class="slide-title">Accepted Papers · Heatmap <span class="muted">· GRaM @ ICLR 2026</span></div>
+    <div class="slide-sub">84 papers · mathematical themes &times; ML areas</div>
+  </div>
+
+  <div class="heatmap-wrap">
+    <div class="heatmap">
+      <table>
+        <thead>
+          <tr>
+            <th class="corner"></th>
+            <th class="row-tot-header">%</th>
+            <th class="col-header"><span class="col-name">Generative mod.</span><span class="col-count" title="16 papers">10%</span></th>
+            <th class="col-header"><span class="col-name">Repres. learning</span><span class="col-count" title="28 papers">18%</span></th>
+            <th class="col-header"><span class="col-name">Molecular / 3D</span><span class="col-count" title="17 papers">11%</span></th>
+            <th class="col-header"><span class="col-name">LLMs / Found. mod.</span><span class="col-count" title="16 papers">10%</span></th>
+            <th class="col-header"><span class="col-name">Optim. / Training</span><span class="col-count" title="26 papers">16%</span></th>
+            <th class="col-header"><span class="col-name">Theory / Express.</span><span class="col-count" title="11 papers">7%</span></th>
+            <th class="col-header"><span class="col-name">Scaling / Effic.</span><span class="col-count" title="21 papers">13%</span></th>
+            <th class="col-header"><span class="col-name">Induct. / Architec.</span><span class="col-count" title="20 papers">13%</span></th>
+            <th class="col-header"><span class="col-name">Others</span><span class="col-count" title="3 papers">2%</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="row-header">Graph theory</th>
+            <td class="row-tot" title="18 papers">15%</td>
+            <td class="cell" style="background:rgb(253,201,106);color:#222;">3</td>
+            <td class="cell" style="background:rgb(253,201,106);color:#222;">3</td>
+            <td class="cell" style="background:rgb(242,95,47);color:#fff;">6</td>
+            <td class="cell" style="background:rgb(254,239,169);color:#222;">1</td>
+            <td class="cell" style="background:rgb(242,95,47);color:#fff;">6</td>
+            <td class="cell" style="background:rgb(253,201,106);color:#222;">3</td>
+            <td class="cell" style="background:rgb(232,49,34);color:#fff;">7</td>
+            <td class="cell" style="background:rgb(253,141,60);color:#222;">5</td>
+            <td class="cell" style="background:rgb(255,255,204);color:#222;">·</td>
+          </tr>
+          <tr>
+            <th class="row-header">Group theory / Equivariance</th>
+            <td class="row-tot" title="24 papers">20%</td>
+            <td class="cell" style="background:rgb(253,141,60);color:#222;">5</td>
+            <td class="cell" style="background:rgb(232,49,34);color:#fff;">7</td>
+            <td class="cell" style="background:rgb(232,49,34);color:#fff;">7</td>
+            <td class="cell" style="background:rgb(253,201,106);color:#222;">3</td>
+            <td class="cell" style="background:rgb(232,49,34);color:#fff;">7</td>
+            <td class="cell" style="background:rgb(253,141,60);color:#222;">5</td>
+            <td class="cell" style="background:rgb(242,95,47);color:#fff;">6</td>
+            <td class="cell" style="background:rgb(128,0,38);color:#fff;">10</td>
+            <td class="cell" style="background:rgb(255,255,204);color:#222;">·</td>
+          </tr>
+          <tr>
+            <th class="row-header">Differential geometry</th>
+            <td class="row-tot" title="20 papers">17%</td>
+            <td class="cell" style="background:rgb(167,10,34);color:#fff;">9</td>
+            <td class="cell" style="background:rgb(242,95,47);color:#fff;">6</td>
+            <td class="cell" style="background:rgb(254,224,135);color:#222;">2</td>
+            <td class="cell" style="background:rgb(253,171,83);color:#222;">4</td>
+            <td class="cell" style="background:rgb(207,20,30);color:#fff;">8</td>
+            <td class="cell" style="background:rgb(254,224,135);color:#222;">2</td>
+            <td class="cell" style="background:rgb(254,239,169);color:#222;">1</td>
+            <td class="cell" style="background:rgb(253,201,106);color:#222;">3</td>
+            <td class="cell" style="background:rgb(255,255,204);color:#222;">·</td>
+          </tr>
+          <tr>
+            <th class="row-header">Topology / TDA</th>
+            <td class="row-tot" title="9 papers">8%</td>
+            <td class="cell" style="background:rgb(254,239,169);color:#222;">1</td>
+            <td class="cell" style="background:rgb(255,255,204);color:#222;">·</td>
+            <td class="cell" style="background:rgb(254,224,135);color:#222;">2</td>
+            <td class="cell" style="background:rgb(254,239,169);color:#222;">1</td>
+            <td class="cell" style="background:rgb(253,201,106);color:#222;">3</td>
+            <td class="cell" style="background:rgb(254,239,169);color:#222;">1</td>
+            <td class="cell" style="background:rgb(254,239,169);color:#222;">1</td>
+            <td class="cell" style="background:rgb(254,239,169);color:#222;">1</td>
+            <td class="cell" style="background:rgb(254,239,169);color:#222;">1</td>
+          </tr>
+          <tr>
+            <th class="row-header">Hyperbolic / Non-Euclidean</th>
+            <td class="row-tot" title="7 papers">6%</td>
+            <td class="cell" style="background:rgb(254,239,169);color:#222;">1</td>
+            <td class="cell" style="background:rgb(253,171,83);color:#222;">4</td>
+            <td class="cell" style="background:rgb(255,255,204);color:#222;">·</td>
+            <td class="cell" style="background:rgb(254,224,135);color:#222;">2</td>
+            <td class="cell" style="background:rgb(255,255,204);color:#222;">·</td>
+            <td class="cell" style="background:rgb(254,239,169);color:#222;">1</td>
+            <td class="cell" style="background:rgb(254,224,135);color:#222;">2</td>
+            <td class="cell" style="background:rgb(253,171,83);color:#222;">4</td>
+            <td class="cell" style="background:rgb(255,255,204);color:#222;">·</td>
+          </tr>
+          <tr>
+            <th class="row-header">Optimal transport</th>
+            <td class="row-tot" title="5 papers">4%</td>
+            <td class="cell" style="background:rgb(255,255,204);color:#222;">·</td>
+            <td class="cell" style="background:rgb(254,239,169);color:#222;">1</td>
+            <td class="cell" style="background:rgb(254,239,169);color:#222;">1</td>
+            <td class="cell" style="background:rgb(254,224,135);color:#222;">2</td>
+            <td class="cell" style="background:rgb(253,201,106);color:#222;">3</td>
+            <td class="cell" style="background:rgb(255,255,204);color:#222;">·</td>
+            <td class="cell" style="background:rgb(254,224,135);color:#222;">2</td>
+            <td class="cell" style="background:rgb(255,255,204);color:#222;">·</td>
+            <td class="cell" style="background:rgb(255,255,204);color:#222;">·</td>
+          </tr>
+          <tr>
+            <th class="row-header">Linear algebra / Spectral</th>
+            <td class="row-tot" title="18 papers">15%</td>
+            <td class="cell" style="background:rgb(254,224,135);color:#222;">2</td>
+            <td class="cell" style="background:rgb(207,20,30);color:#fff;">8</td>
+            <td class="cell" style="background:rgb(255,255,204);color:#222;">·</td>
+            <td class="cell" style="background:rgb(253,141,60);color:#222;">5</td>
+            <td class="cell" style="background:rgb(242,95,47);color:#fff;">6</td>
+            <td class="cell" style="background:rgb(254,224,135);color:#222;">2</td>
+            <td class="cell" style="background:rgb(253,141,60);color:#222;">5</td>
+            <td class="cell" style="background:rgb(253,201,106);color:#222;">3</td>
+            <td class="cell" style="background:rgb(254,239,169);color:#222;">1</td>
+          </tr>
+          <tr>
+            <th class="row-header">Information theory / Dim.</th>
+            <td class="row-tot" title="9 papers">8%</td>
+            <td class="cell" style="background:rgb(254,224,135);color:#222;">2</td>
+            <td class="cell" style="background:rgb(253,141,60);color:#222;">5</td>
+            <td class="cell" style="background:rgb(254,239,169);color:#222;">1</td>
+            <td class="cell" style="background:rgb(254,239,169);color:#222;">1</td>
+            <td class="cell" style="background:rgb(253,201,106);color:#222;">3</td>
+            <td class="cell" style="background:rgb(254,239,169);color:#222;">1</td>
+            <td class="cell" style="background:rgb(253,201,106);color:#222;">3</td>
+            <td class="cell" style="background:rgb(254,239,169);color:#222;">1</td>
+            <td class="cell" style="background:rgb(255,255,204);color:#222;">·</td>
+          </tr>
+          <tr>
+            <th class="row-header">Empirical / Structured data</th>
+            <td class="row-tot" title="10 papers">8%</td>
+            <td class="cell" style="background:rgb(254,239,169);color:#222;">1</td>
+            <td class="cell" style="background:rgb(253,201,106);color:#222;">3</td>
+            <td class="cell" style="background:rgb(254,224,135);color:#222;">2</td>
+            <td class="cell" style="background:rgb(253,201,106);color:#222;">3</td>
+            <td class="cell" style="background:rgb(253,171,83);color:#222;">4</td>
+            <td class="cell" style="background:rgb(255,255,204);color:#222;">·</td>
+            <td class="cell" style="background:rgb(254,239,169);color:#222;">1</td>
+            <td class="cell" style="background:rgb(254,224,135);color:#222;">2</td>
+            <td class="cell" style="background:rgb(254,239,169);color:#222;">1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

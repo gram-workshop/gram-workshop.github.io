@@ -16,11 +16,13 @@
 
       --brand: #155799;        /* primary blue */
       --accent: #ff8800;       /* orange */
-      --highlight: rgba(255, 136, 0, 0.06);
-      --session-grad-a: rgba(255, 136, 0, 0.12);
-      --session-grad-b: rgba(21, 87, 153, 0.12);
 
       --break-bg: #fafafa;
+
+      /* Per-track header / first-row backgrounds (light solids, same family as brand palette) */
+      --track-paper-bg:        #e9f0f8;  /* light blue (brand) */
+      --track-competition-bg:  #faf5eb;  /* light warm beige (accent) */
+      --track-blogpost-bg:     #eef4f1;  /* soft green-gray (poster / fresh) */
 
       /* tag colors (exact website values) */
       --invited-bg:     rgba(21, 87, 153, 0.12);  --invited-ink:     #155799;
@@ -68,10 +70,10 @@
     .slide-title .muted { color: var(--muted); font-weight: 600; }
     .slide-sub { font-size: 22px; color: var(--muted); }
 
-    /* Three columns, identical width and height */
+    /* Three columns: paper slightly wider; equal height */
     .columns {
       display: grid;
-      grid-template-columns: minmax(0, 1.24fr) minmax(0, 0.91fr) minmax(0, 0.85fr);
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, 1fr);
       gap: 28px;
       justify-content: center;
       flex: 1;
@@ -82,7 +84,7 @@
     /* Track card — mirrors .program-session */
     .session {
       display: grid;
-      grid-template-rows: auto 0.8fr 0.75fr 0.95fr 0.7fr 0.45fr;
+      grid-template-rows: auto 0.8fr 0.75fr 1.05fr 0.6fr 0.45fr;
       border: 1px solid var(--line);
       border-radius: 12px;
       overflow: hidden;
@@ -97,8 +99,16 @@
       align-items: center;
       justify-content: space-between;
       padding: 14px 22px;
-      background: linear-gradient(90deg, var(--session-grad-a), var(--session-grad-b));
       border-bottom: 1px solid var(--line);
+    }
+    .session--paper .session-header {
+      background: var(--track-paper-bg);
+    }
+    .session--competition .session-header {
+      background: var(--track-competition-bg);
+    }
+    .session--blogpost .session-header {
+      background: var(--track-blogpost-bg);
     }
     .session-title {
       font-weight: 700;
@@ -123,10 +133,26 @@
       overflow: hidden;
     }
     .row:first-of-type { border-top: none; }
-    .row.highlight { background: var(--highlight); }
+    .session--paper .row.highlight {
+      background: var(--track-paper-bg);
+    }
+    .session--competition .row.highlight {
+      background: var(--track-competition-bg);
+    }
+    .session--blogpost .row.highlight {
+      background: var(--track-blogpost-bg);
+    }
     .row.numbers {
-      background: linear-gradient(90deg, var(--session-grad-a), var(--session-grad-b));
       justify-content: center;
+    }
+    .session--paper .row.numbers {
+      background: var(--track-paper-bg);
+    }
+    .session--competition .row.numbers {
+      background: var(--track-competition-bg);
+    }
+    .session--blogpost .row.numbers {
+      background: var(--track-blogpost-bg);
     }
     .row.thanks { background: #fafafa; }
     .row.chairs {
@@ -260,7 +286,7 @@
   <div class="columns">
 
     <!-- LEFT: PAPER TRACK -->
-    <section class="session">
+    <section class="session session--paper">
       <div class="session-header">
         <span class="session-title">Paper Track</span>
         <span class="session-sub">OpenReview · PMLR</span>
@@ -323,7 +349,7 @@
     </section>
 
     <!-- MIDDLE: COMPETITION TRACK -->
-    <section class="session">
+    <section class="session session--competition">
       <div class="session-header">
         <span class="session-title">Competition Track</span>
         <span class="session-sub">gram-competition.github.io</span>
@@ -343,7 +369,7 @@
       <div class="row highlight">
         <div class="label">Motivation</div>
         <div class="content">
-          <p> <strong>Dedicated benchmark challenge</strong> about generating airflow at future time points based on the 3D geometries differently-sized airfoils, and previous points.</p>
+          <p> <strong>Dedicated benchmark challenge</strong> about generating airflow at future time points based on the 3D geometries of differently-sized airfoils and previous points.</p>
         </div>
       </div>
 
@@ -378,7 +404,7 @@
     </section>
 
     <!-- RIGHT: BLOGPOST TRACK -->
-    <section class="session">
+    <section class="session session--blogpost">
       <div class="session-header">
         <span class="session-title">Blogpost Track</span>
         <span class="session-sub">gram-blogposts.github.io</span>
