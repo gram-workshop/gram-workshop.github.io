@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>GRaM @ ICLR 2026 — Tracks Slide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Palette pulled from the website (assets/css/style.scss) */
+    :root {
+      --bg: #ffffff;
+      --ink: #222222;
+      --muted: #555555;
+      --muted-2: #777777;
+      --line: #e5e7eb;
+      --line-2: #f0f0f0;
+
+      --brand: #155799;        /* primary blue */
+      --accent: #ff8800;       /* orange */
+      --highlight: rgba(255, 136, 0, 0.06);
+      --session-grad-a: rgba(255, 136, 0, 0.12);
+      --session-grad-b: rgba(21, 87, 153, 0.12);
+
+      --break-bg: #fafafa;
+
+      /* tag colors (exact website values) */
+      --invited-bg:     rgba(21, 87, 153, 0.12);  --invited-ink:     #155799;
+      --contributed-bg: rgba(255, 136, 0, 0.15);  --contributed-ink: #b45f00;
+      --poster-bg:      rgba(46, 139, 87, 0.15);  --poster-ink:      #2e8b57;
+      --panel-bg:       rgba(128, 90, 213, 0.15); --panel-ink:       #6b46c1;
+      --online-bg:      #eef2f7;                  --online-ink:      #555555;
+      --recorded-bg:    #f3e8ff;                  --recorded-ink:    #6b21a8;
+      --duration-bg:    #f3f4f6;                  --duration-ink:    #555555;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      background: #d9dee3;
+      color: var(--ink);
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    /* 16:9 slide canvas, 1920x1080 */
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      margin: 24px auto;
+      background: var(--bg);
+      box-shadow: 0 8px 40px rgba(0,0,0,.15);
+      padding: 56px 96px 48px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .slide-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      border-bottom: 3px solid var(--brand);
+      padding-bottom: 16px;
+      margin-bottom: 28px;
+    }
+    .slide-title {
+      font-size: 48px; font-weight: 800; letter-spacing: -0.3px; margin: 0;
+      color: var(--ink);
+    }
+    .slide-title .muted { color: var(--muted); font-weight: 600; }
+    .slide-sub { font-size: 22px; color: var(--muted); }
+
+    /* Three columns, identical width and height */
+    .columns {
+      display: grid;
+      grid-template-columns: minmax(0, 1.24fr) minmax(0, 0.91fr) minmax(0, 0.85fr);
+      gap: 28px;
+      justify-content: center;
+      flex: 1;
+      min-height: 0;
+      align-items: stretch;
+    }
+
+    /* Track card — mirrors .program-session */
+    .session {
+      display: grid;
+      grid-template-rows: auto 0.8fr 0.75fr 0.95fr 0.7fr 0.45fr;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #ffffff;
+      min-height: 0;
+      height: 100%;
+    }
+
+    /* Track header — mirrors .program-session-header */
+    .session-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 22px;
+      background: linear-gradient(90deg, var(--session-grad-a), var(--session-grad-b));
+      border-bottom: 1px solid var(--line);
+    }
+    .session-title {
+      font-weight: 700;
+      font-size: 24px;
+      color: var(--brand);
+      letter-spacing: 0.3px;
+    }
+    .session-sub {
+      font-size: 15px;
+      color: var(--muted);
+      font-family: "Menlo", "Consolas", monospace;
+    }
+
+    /* Row — mirrors .program-row; rows are equal height so they align across cards */
+    .row {
+      padding: 22px 26px;
+      border-top: 1px solid var(--line-2);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      min-height: 0;
+      overflow: hidden;
+    }
+    .row:first-of-type { border-top: none; }
+    .row.highlight { background: var(--highlight); }
+    .row.numbers {
+      background: linear-gradient(90deg, var(--session-grad-a), var(--session-grad-b));
+      justify-content: center;
+    }
+    .row.thanks { background: #fafafa; }
+    .row.chairs {
+      background: #fafafa;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .row.chairs .content {
+      font-size: 16px;
+      line-height: 1.35;
+    }
+    .row.thanks ul.bullets { border-left: none; margin-top: 0; }
+    .row.thanks ul.bullets li {
+      padding-top: 3px;
+      padding-bottom: 3px;
+      margin-bottom: 1px;
+      line-height: 1.35;
+    }
+
+    .row .label {
+      font-weight: 600;
+      color: var(--brand);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 14px;
+    }
+    .row .content {
+      line-height: 1.6;
+      font-size: 17px;
+      color: var(--ink);
+      min-height: 0;
+      overflow: hidden;
+    }
+    .row .content p { margin: 0 0 12px 0; }
+    .row .content p:last-child { margin-bottom: 0; }
+    .row .content em { color: var(--muted); font-style: italic; }
+    .poster-section-title {
+      color: var(--brand);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    /* Stats inside a row (second row) */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .stat-grid.single { grid-template-columns: 1fr; }
+    .stat {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px 14px;
+      text-align: center;
+    }
+    .stat .num {
+      font-size: 30px;
+      font-weight: 800;
+      color: var(--brand);
+      line-height: 1.1;
+      font-variant-numeric: tabular-nums;
+    }
+    .stat .lbl {
+      font-size: 13px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 3px;
+    }
+
+    /* Tags — mirrors .program-tag + variants */
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      padding: 2px 9px;
+      border-radius: 999px;
+      margin-right: 4px;
+      vertical-align: middle;
+    }
+    .tag.invited     { background: var(--invited-bg);     color: var(--invited-ink); }
+    .tag.contributed { background: var(--contributed-bg); color: var(--contributed-ink); }
+    .tag.poster      { background: var(--poster-bg);      color: var(--poster-ink); }
+    .tag.panel       { background: var(--panel-bg);       color: var(--panel-ink); }
+    .tag.online      { background: var(--online-bg);      color: var(--online-ink); }
+    .tag.recorded    { background: var(--recorded-bg);    color: var(--recorded-ink); }
+    .tag.duration    { background: var(--duration-bg);    color: var(--duration-ink); }
+
+    ul.bullets {
+      list-style: none;
+      padding-left: 0;
+      margin: 6px 0 0 0;
+      border-left: 3px solid rgba(255, 136, 0, 0.4);
+    }
+    ul.bullets li {
+      padding: 7px 0 7px 12px;
+      margin-bottom: 4px;
+      font-size: 15.5px;
+      line-height: 1.5;
+    }
+    ul.bullets li:last-child { margin-bottom: 0; }
+
+    .link {
+      color: var(--brand);
+      font-weight: 600;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* Print to PDF: export at exact slide size */
+    @page { size: 1920px 1080px; margin: 0; }
+    @media print {
+      html, body { background: #fff; }
+      .slide { margin: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="slide">
+  <div class="slide-header">
+    <div class="slide-title">Three Tracks <span class="muted">· GRaM @ ICLR 2026</span></div>
+    <div class="slide-sub">Papers · Blogposts · Competition</div>
+  </div>
+
+  <div class="columns">
+
+    <!-- LEFT: PAPER TRACK -->
+    <section class="session">
+      <div class="session-header">
+        <span class="session-title">Paper Track</span>
+        <span class="session-sub">OpenReview · PMLR</span>
+      </div>
+
+      <!-- Row 1: Accepted (numbers) -->
+      <div class="row numbers">
+        <div class="label">Accepted</div>
+        <div class="content">
+          <div class="stat-grid">
+            <div class="stat"><div class="num">32</div><div class="lbl">Proceedings (PMLR)</div></div>
+            <div class="stat"><div class="num">52</div><div class="lbl">Tiny Papers</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: Motivation -->
+      <div class="row highlight">
+        <div class="label">Motivation</div>
+        <div class="content">
+          <p><strong>Original contributions bridging geometry and machine learning</strong> through novel methods, theory, or applications, with a focus on scale and simplicity.</p>
+        </div>
+      </div>
+
+      <!-- Row 3: Schedule -->
+      <div class="row">
+        <div class="label">Contributed Talks</div>
+        <div class="content">
+          <p>
+            <span class="tag contributed">Spotlights</span>
+            <span class="tag duration">10:10 – 11:00</span><br>
+            <em>5 selected papers receive live spotlight talks.</em>
+          </p>
+          <p class="label">Poster Sessions</p>
+          <p>
+            <span class="tag poster">Poster Session A</span>
+            <span class="tag duration">11:35 – 12:25</span>
+            <span class="tag poster">Poster Session B</span>
+            <span class="tag duration">16:05 – 16:55</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Row 4: Thanks & Logistics -->
+      <div class="row thanks">
+        <div class="label">Thanks &amp; Logistics</div>
+        <div class="content">
+          <ul class="bullets">
+            <li>Proceedings in collaboration with <strong>PMLR</strong> <em>(publication soon)</em></li>
+            <li><strong>133</strong> submissions, <strong>167</strong> reviewers, <strong>11</strong> Area Chairs</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row chairs">
+        <div class="content">
+          <p><strong>Area Chairs:</strong> Libby Baker, Erik Bekkers, Samuel Fadel, Oumar Kaba, Hannah Lawrence, Alison Pouplin, Behrooz Tahmasebi, Shubhendu Trivedi, Sharvaree Vadgama, Robin Walters, Bo Zhao</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MIDDLE: COMPETITION TRACK -->
+    <section class="session">
+      <div class="session-header">
+        <span class="session-title">Competition Track</span>
+        <span class="session-sub">gram-competition.github.io</span>
+      </div>
+
+      <!-- Row 1: Submissions (numbers) -->
+      <div class="row numbers">
+        <div class="label">Submissions</div>
+        <div class="content">
+          <div class="stat-grid single">
+            <div class="stat"><div class="num">12</div><div class="lbl">Submissions</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: Motivation -->
+      <div class="row highlight">
+        <div class="label">Motivation</div>
+        <div class="content">
+          <p> <strong>Dedicated benchmark challenge</strong> about generating airflow at future time points based on the 3D geometries differently-sized airfoils, and previous points.</p>
+        </div>
+      </div>
+
+      <!-- Row 3: Winner Announcement -->
+      <div class="row">
+        <div class="label">Winner Announcement</div>
+        <div class="content">
+          <p>
+            <span class="tag contributed">Live</span>
+            <span class="tag duration">11:00 – 11:15</span>
+          </p>
+          <p>Announced alongside the BeyondMath keynote on AI for Physics and Engineering.</p>
+        </div>
+      </div>
+
+      <!-- Row 4: Thanks & Logistics -->
+      <div class="row thanks">
+        <div class="label">Thanks &amp; Logistics</div>
+        <div class="content">
+          <ul class="bullets">
+            <li>Proceedings in collaboration with <strong>PMLR</strong> <em>(publication soon)</em></li>
+            <li>Thanks to <strong>MCML</strong> (500 € award) and <strong>BeyondMath</strong> (dataset &amp; simulations)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row chairs">
+        <div class="content">
+          <p><strong>Competition Chairs:</strong> Gavin Seegoolam &amp; Julian Suk</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHT: BLOGPOST TRACK -->
+    <section class="session">
+      <div class="session-header">
+        <span class="session-title">Blogpost Track</span>
+        <span class="session-sub">gram-blogposts.github.io</span>
+      </div>
+
+      <!-- Row 1: Accepted (numbers) -->
+      <div class="row numbers">
+        <div class="label">Accepted</div>
+        <div class="content">
+          <div class="stat-grid single">
+            <div class="stat"><div class="num">10</div><div class="lbl">Accepted Blogposts</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: Motivation -->
+      <div class="row highlight">
+        <div class="label">Motivation</div>
+        <div class="content">
+          <p><strong>Pedagogical and accessible</strong> blogposts, such as tutorials, opinion pieces, and open problems that make geometric deep learning more accessible.</p>
+        </div>
+      </div>
+
+      <!-- Row 3: Schedule / Online -->
+      <div class="row">
+        <div class="label">Blogpost Online</div>
+        <div class="content">
+          <p><span class="tag online">Online</span></p>
+          <!-- <p><span class="link">gram-blogposts.github.io</span></p> -->
+          <p>Available online: <span class="session-sub">gram-blogposts.github.io</span> </p>
+
+        </div>
+      </div>
+
+      <!-- Row 4: Thanks & Logistics -->
+      <div class="row thanks">
+        <div class="label">Thanks &amp; Logistics</div>
+        <div class="content">
+          <ul class="bullets">
+            <li><em>Thank you to all contributors and reviewers.</em></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row chairs">
+        <div class="content">
+          <p><strong>Blogpost Chair:</strong> Manuel Lecha</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+</body>
+</html>

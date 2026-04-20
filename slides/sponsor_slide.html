@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>GRaM @ ICLR 2026 — Sponsors Slide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Palette pulled from the website (assets/css/style.scss) */
+    :root {
+      --bg: #ffffff;
+      --ink: #222222;
+      --muted: #555555;
+      --muted-2: #777777;
+      --line: #e5e7eb;
+      --line-2: #f0f0f0;
+
+      --brand: #155799;        /* primary blue */
+      --accent: #ff8800;       /* orange */
+      --highlight: rgba(255, 136, 0, 0.06);
+      --session-grad-a: rgba(255, 136, 0, 0.12);
+      --session-grad-b: rgba(21, 87, 153, 0.12);
+
+      /* tag colors */
+      --time-bg:     #f3f4f6;                  --time-ink:     #555555;
+      --tba-bg:      #f3f4f6;                  --tba-ink:      #555555;
+      --award-bg:    rgba(46, 139, 87, 0.15);  --award-ink:    #2e6b3e;
+      --grant-bg:    rgba(255, 136, 0, 0.15);  --grant-ink:    #b45f00;
+      --dataset-bg:  rgba(128, 90, 213, 0.15); --dataset-ink:  #6b46c1;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      background: #d9dee3;
+      color: var(--ink);
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    /* 16:9 slide canvas, 1920x1080 */
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      margin: 24px auto;
+      background: var(--bg);
+      box-shadow: 0 8px 40px rgba(0,0,0,.15);
+      padding: 56px 96px 48px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .slide-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      border-bottom: 3px solid var(--brand);
+      padding-bottom: 16px;
+      margin-bottom: 28px;
+    }
+    .slide-title {
+      font-size: 48px; font-weight: 800; letter-spacing: -0.3px; margin: 0;
+      color: var(--ink);
+    }
+    .slide-title .muted { color: var(--muted); font-weight: 600; }
+    .slide-sub { font-size: 22px; color: var(--muted); }
+
+    /* Three columns, identical width and height */
+    .columns {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+      justify-content: center;
+      flex: 1;
+      min-height: 0;
+      align-items: stretch;
+    }
+
+    /* Sponsor card — mirrors tracks .session */
+    .session {
+      display: grid;
+      /* rows: title | logo | description | contribution | talks */
+      grid-template-rows: auto 0.7fr 1.5fr 0.6fr 0.7fr;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #ffffff;
+      min-height: 0;
+      height: 100%;
+    }
+
+    /* Sponsor header — per-card tint */
+    .session-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-bottom: 1px solid var(--line);
+      text-align: center;
+    }
+    .session.nt   .session-header { background: rgba(255, 136,   0, 0.13); }
+    .session.mcml .session-header { background: rgba( 21,  87, 153, 0.13); }
+    .session.bm   .session-header { background: rgba( 21,  87, 153, 0.09); }
+    .session-title {
+      font-weight: 800;
+      font-size: 28px;
+      color: var(--ink);
+      letter-spacing: -0.2px;
+    }
+
+    /* Rows — mirror tracks .row */
+    .row {
+      padding: 18px 22px;
+      border-top: 1px solid var(--line-2);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      min-height: 0;
+      overflow: hidden;
+    }
+    .row:first-of-type { border-top: none; }
+    .row.highlight { background: var(--highlight); }
+
+    .row .label {
+      font-weight: 600;
+      color: var(--brand);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 10px;
+    }
+    .row .content {
+      line-height: 1.55;
+      font-size: 17px;
+      color: var(--ink);
+      min-height: 0;
+      overflow: hidden;
+    }
+    .row.description .content {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .row .content p { margin: 0 0 10px 0; }
+    .row .content p:last-child { margin-bottom: 0; }
+    .row .content em { color: var(--muted); font-style: italic; }
+
+    /* Logo row — centered image, no label */
+    .row.logo {
+      align-items: center;
+      justify-content: center;
+      padding: 18px 24px;
+      background: #ffffff;
+    }
+    .row.logo img {
+      height: 90px;
+      max-width: 100%;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Website row — compact, no URL text */
+    .row.website {
+      align-items: center;
+      justify-content: center;
+      padding: 6px 22px;
+      background: #ffffff;
+    }
+    .row.website a {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--brand);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 14px;
+    }
+
+    /* Tags */
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      padding: 2px 9px;
+      border-radius: 999px;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+    .tag.time    { background: var(--time-bg);    color: var(--time-ink); }
+    .tag.tba     { background: var(--tba-bg);     color: var(--tba-ink); }
+    .tag.award   { background: var(--award-bg);   color: var(--award-ink); }
+    .tag.grant   { background: var(--grant-bg);   color: var(--grant-ink); }
+    .tag.dataset { background: var(--dataset-bg); color: var(--dataset-ink); }
+
+    /* Contribution list */
+    ul.contrib {
+      list-style: none;
+      padding: 0; margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    ul.contrib li { display: flex; align-items: baseline; gap: 7px; line-height: 1.4; }
+
+    /* Talk entries */
+    .talk-entry {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 6px;
+      line-height: 1.4;
+    }
+    .talk-entry + .talk-entry { margin-top: 8px; }
+    .speaker { font-weight: 700; color: var(--ink); }
+    .talk-title { font-style: italic; color: #333; }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* Print to PDF: export at exact slide size */
+    @page { size: 1920px 1080px; margin: 0; }
+    @media print {
+      html, body { background: #fff; }
+      .slide { margin: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+<div class="slide">
+
+  <div class="slide-header">
+    <div class="slide-title">Sponsors <span class="muted">· GRaM @ ICLR 2026</span></div>
+    <div class="slide-sub">Thank you for supporting our community</div>
+  </div>
+
+  <div class="columns">
+
+    <!-- ── New Theory ── -->
+    <section class="session nt">
+      <!-- Row 1: Title -->
+      <div class="session-header">
+        <span class="session-title">New Theory</span>
+      </div>
+
+      <!-- Row 2: Logo -->
+      <div class="row logo">
+        <img src="../assets/img/logos/NT_logo_black.svg" alt="New Theory">
+      </div>
+
+      <!-- Row 3: Description -->
+      <div class="row description">
+        <div class="label">About</div>
+        <div class="content">
+          <p>Building <strong>scalable foundational models rooted in Geometric Deep Learning</strong> that break the scaling laws of transformer-based architectures — paving the way for a step change in performance in <strong>Robotics</strong>.</p>
+        </div>
+      </div>
+
+      <!-- Row 5: Contribution -->
+      <div class="row highlight">
+        <div class="label">Contribution</div>
+        <div class="content">
+          <ul class="contrib">
+            <li><span class="tag grant">6 travel grants</span> for in-person participants</li>
+            <li><span class="tag grant">4 virtual passes</span> for remote attendees</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Row 6: Talks -->
+      <div class="row">
+        <div class="label">Talk</div>
+        <div class="content">
+          <div class="talk-entry">
+            <span class="tag tba">15:45-15:55</span>
+            <span class="speaker">Christian Shewmake</span>
+            <span class="talk-title">— Title TBA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── BeyondMath ── -->
+    <section class="session bm">
+      <!-- Row 1: Title -->
+      <div class="session-header">
+        <span class="session-title">BeyondMath</span>
+      </div>
+
+      <!-- Row 2: Logo -->
+      <div class="row logo">
+        <img src="../assets/img/logos/BeyondMath_Black.svg" alt="BeyondMath">
+      </div>
+
+      <!-- Row 3: Description -->
+      <div class="row description">
+        <div class="label">About</div>
+        <div class="content">
+          <p>Pioneer of <strong>Generative Physics</strong> — the world's first foundational AI model trained on the fundamental laws of physics. Delivers a <strong>1,000× acceleration</strong> in simulation speed, compressing design cycles from months to minutes across <strong>aerospace, automotive, and energy</strong>.</p>
+        </div>
+      </div>
+
+      <!-- Row 5: Contribution -->
+      <div class="row highlight">
+        <div class="label">Contribution</div>
+        <div class="content">
+          <ul class="contrib">
+            <li><span class="tag dataset">Competition dataset</span> and engineering infrastructure</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Row 6: Talks -->
+      <div class="row">
+        <div class="label">Programme</div>
+        <div class="content">
+          <div class="talk-entry">
+            <span class="tag time">10:00-10:15</span>
+            <span class="speaker">Gavin Seegoolam</span>
+            <span class="talk-title">BeyondMath: AI for Physics and Engineering & Competition Announcement</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── MCML ── -->
+    <section class="session mcml">
+      <!-- Row 1: Title -->
+      <div class="session-header">
+        <span class="session-title">MCML</span>
+      </div>
+
+      <!-- Row 2: Logo -->
+      <div class="row logo">
+        <img src="../assets/img/logos/mcml.svg" alt="MCML">
+      </div>
+
+      <!-- Row 3: Description -->
+      <div class="row description">
+        <div class="label">About</div>
+        <div class="content">
+          <p>Munich Center Machine Learning is a joint <strong>LMU &amp; TUM</strong> AI research center, one of <strong>six national AI Competence Centers</strong> in Germany, funded by the Federal Ministry of Research, Technology &amp; Space and the Free State of Bavaria. Spans 11 research areas across three pillars: <strong>Foundations of ML, Domain-specific ML, and Perception, Vision &amp; NLP</strong>, with a mission to develop responsible, trustworthy AI and support the next generation of researchers.</p>
+          <p>Advancing ML for medicine, biology &amp; ethics through interdisciplinary research at the interface of computer science &amp; cognitive science, supported by educational outreach to broaden ML and AI knowledge.</p>
+          <p><strong>530+ junior members</strong> · <strong>2700+ citations</strong> · <strong>80 principal investigators</strong></p>
+        </div>
+      </div>
+
+      <!-- Row 5: Contribution -->
+      <div class="row highlight">
+        <div class="label">Contribution</div>
+        <div class="content">
+          <ul class="contrib">
+            <li><span class="tag award">Winner prize</span> for the GRaM competition</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Row 6: Talks -->
+      <!-- <div class="row">
+        <div class="label">Programme</div>
+        <div class="content">
+          <div class="talk-entry">
+            <span class="tag time">10:00</span>
+            <span>Competition intro &amp; overview</span>
+          </div>
+          <div class="talk-entry">
+            <span class="tag time">10:00-10:15</span>
+            <span class="speaker">Julian Suk</span>
+            <span class="talk-title">Competition Announcements</span>
+          </div>
+        </div>
+      </div> -->
+    </section>
+
+  </div>
+</div>
+</body>
+</html>
