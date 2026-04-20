@@ -100,9 +100,13 @@ We are pleased to announce this **second edition of GRaM**, as an **ICLR 2026 wo
 </div>
 </div>
 
+## Paper correlation map
+
+{% include papers26_map.html %}
+
 ## Program
 
-<p style="color: #666; margin-bottom: 16px;">Saturday, April 26, 2026 · All times are local to the venue.</p>
+<p style="color: #666; margin-bottom: 16px;">Sunday, April 26, 2026 · Room 101 A.</p>
 
 <div class="program">
 
@@ -256,7 +260,7 @@ We are pleased to announce this **second edition of GRaM**, as an **ICLR 2026 wo
       <span class="program-tag invited">Invited Talk</span>
       <div style="margin-top: 4px;">
         <span class="program-speaker"><a href="https://nmboffi.github.io/">Nicholas Boffi</a></span> —
-        <span class="program-talk-title">TBA</span>
+        <span class="program-talk-title">"Flow Map Language Models"</span>
       </div>
     </div>
   </div>

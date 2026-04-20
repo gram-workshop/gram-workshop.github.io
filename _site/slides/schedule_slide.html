@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>GRaM @ ICLR 2026 — Schedule Slide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Palette pulled from the website (assets/css/style.scss) */
+    :root {
+      --bg: #ffffff;
+      --ink: #222222;
+      --muted: #555555;
+      --muted-2: #777777;
+      --line: #e5e7eb;
+      --line-2: #f0f0f0;
+
+      --brand: #155799;        /* primary blue */
+      --accent: #ff8800;       /* orange */
+      --highlight: rgba(255, 136, 0, 0.06);
+      --session-grad-a: rgba(255, 136, 0, 0.12);
+      --session-grad-b: rgba(21, 87, 153, 0.12);
+
+      --break-bg: #fafafa;
+
+      /* tag colors (exact website values) */
+      --invited-bg:     rgba(21, 87, 153, 0.12);  --invited-ink:     #155799;
+      --contributed-bg: rgba(255, 136, 0, 0.15);  --contributed-ink: #b45f00;
+      --poster-bg:      rgba(46, 139, 87, 0.15);  --poster-ink:      #2e8b57;
+      --panel-bg:       rgba(128, 90, 213, 0.15); --panel-ink:       #6b46c1;
+      --online-bg:      #eef2f7;                  --online-ink:      #555555;
+      --recorded-bg:    #f3e8ff;                  --recorded-ink:    #6b21a8;
+      --duration-bg:    #f3f4f6;                  --duration-ink:    #555555;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      background: #d9dee3;
+      color: var(--ink);
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    /* 16:9 slide canvas, 1920x1080 */
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      margin: 24px auto;
+      background: var(--bg);
+      box-shadow: 0 8px 40px rgba(0,0,0,.15);
+      padding: 48px 160px 40px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .slide-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      border-bottom: 3px solid var(--brand);
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+    }
+    .slide-title {
+      font-size: 48px; font-weight: 800; letter-spacing: -0.3px; margin: 0;
+      color: var(--ink);
+    }
+    .slide-title .muted { color: var(--muted); font-weight: 600; }
+    .slide-sub { font-size: 22px; color: var(--muted); }
+
+    /* Two columns — narrower tables, centered, with generous gap */
+    .columns {
+      display: grid;
+      grid-template-columns: 720px 720px;
+      gap: 120px;
+      justify-content: center;
+      align-items: start;
+      flex: 1;
+      min-height: 0;
+    }
+
+    /* Session card — mirrors .program-session */
+    .session {
+      display: flex; flex-direction: column;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #ffffff;
+      min-height: 0;
+    }
+
+    /* Session header — mirrors .program-session-header */
+    .session-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      background: linear-gradient(90deg, var(--session-grad-a), var(--session-grad-b));
+      border-bottom: 1px solid var(--line);
+    }
+    .session-title {
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--brand);
+      letter-spacing: 0.3px;
+    }
+    .session-sub {
+      font-size: 17px;
+      color: var(--muted);
+    }
+
+    .rows { flex: 1; display: flex; flex-direction: column; }
+
+    /* Row — mirrors .program-row */
+    .row {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 16px;
+      padding: 9px 18px;
+      border-top: 1px solid var(--line-2);
+      align-items: start;
+    }
+    .row:first-child { border-top: none; }
+    .row.break {
+      background: var(--break-bg);
+      color: var(--muted-2);
+      font-style: italic;
+    }
+    .row.highlight { background: var(--highlight); }
+
+    .time {
+      font-weight: 600;
+      color: var(--brand);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+      font-size: 16px;
+      padding-top: 1px;
+    }
+    .content { line-height: 1.35; font-size: 15.5px; }
+
+    .title { font-weight: 600; color: var(--ink); }
+    .speaker { color: #444444; font-weight: 600; }
+    .talk-title { font-style: italic; color: #333333; }
+    .meta { color: var(--muted); font-size: 14px; margin-top: 3px; }
+
+    /* Tags — mirrors .program-tag + variants */
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      padding: 2px 9px;
+      border-radius: 999px;
+      margin-left: 0;
+      margin-right: 4px;
+      vertical-align: middle;
+    }
+    .tag.invited     { background: var(--invited-bg);     color: var(--invited-ink); }
+    .tag.contributed { background: var(--contributed-bg); color: var(--contributed-ink); }
+    .tag.poster      { background: var(--poster-bg);      color: var(--poster-ink); }
+    .tag.panel       { background: var(--panel-bg);       color: var(--panel-ink); }
+    .tag.online      { background: var(--online-bg);      color: var(--online-ink); }
+    .tag.recorded    { background: var(--recorded-bg);    color: var(--recorded-ink); }
+    .tag.duration    { background: var(--duration-bg);    color: var(--duration-ink); }
+
+    /* Talks list — mirrors .program-talks */
+    ul.talks {
+      list-style: none;
+      padding-left: 0;
+      margin: 6px 0 0 0;
+      border-left: 3px solid rgba(255, 136, 0, 0.4);
+    }
+    ul.talks li {
+      padding: 4px 0 4px 12px;
+      margin-bottom: 2px;
+      font-size: 14.5px;
+      line-height: 1.35;
+    }
+    ul.talks li:last-child { margin-bottom: 0; }
+
+    .footnote { margin-top: 6px; color: var(--muted); font-size: 12.5px; }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* Print to PDF: export at exact slide size */
+    @page { size: 1920px 1080px; margin: 0; }
+    @media print {
+      html, body { background: #fff; }
+      .slide { margin: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="slide">
+  <div class="slide-header">
+    <div class="slide-title">Program <span class="muted">· GRaM @ ICLR 2026</span></div>
+    <div class="slide-sub">Saturday, April 26, 2026 · Local time</div>
+  </div>
+
+  <div class="columns">
+
+    <!-- LEFT: MORNING -->
+    <section class="session">
+      <div class="session-header">
+        <span class="session-title">Morning Session</span>
+        <span class="session-sub">09:00 – 12:25</span>
+      </div>
+      <div class="rows">
+
+        <div class="row">
+          <div class="time">09:00 – 09:10</div>
+          <div class="content"><span class="title">Registration &amp; Welcome</span></div>
+        </div>
+
+        <div class="row highlight">
+          <div class="time">09:10 – 09:40</div>
+          <div class="content">
+            <span class="tag invited">Invited Talk</span>
+            <div><span class="speaker">Kathlén Kohn</span> — <span class="talk-title">"Parameter symmetries, singularities, and group equivariance"</span></div>
+          </div>
+        </div>
+
+        <div class="row highlight">
+          <div class="time">09:40 – 10:00</div>
+          <div class="content">
+            <span class="tag invited">Invited Talk</span>
+            <div><span class="speaker">Gabriel Loaiza-Ganem</span> — <span class="talk-title">"A Geometric View of Deep Generative Models"</span></div>
+          </div>
+        </div>
+
+        <div class="row break">
+          <div class="time">10:00 – 10:10</div>
+          <div class="content">Break</div>
+        </div>
+
+        <div class="row">
+          <div class="time">10:10 – 11:00</div>
+          <div class="content">
+            <span class="tag contributed">Contributed Talks</span>
+            <ul class="talks">
+              <li>
+                <span class="talk-title">The Affine Divergence: Aligning Activation Updates Beyond Normalisation</span><br>
+                <span class="speaker">George Bird</span>
+                <span class="tag duration">10 min</span>
+              </li>
+              <li>
+                <span class="talk-title">Algebraic priors for approximately equivariant networks</span><br>
+                <span class="speaker">Riccardo Ali</span>
+                <span class="tag duration">10 min</span>
+              </li>
+              <li>
+                <span class="talk-title">The Geometry of Spectral Gradient Descent: Layerwise Criteria for SignSGD vs SpecSGD</span><br>
+                <span class="speaker">Laura Gomezjurado Gonzalez</span>
+                <span class="tag duration">5 min</span>
+              </li>
+              <li>
+                <span class="talk-title">mHC-lite: You Don't Need 20 Sinkhorn–Knopp Iterations</span><br>
+                <span class="speaker">Yongyi Yang</span>
+                <span class="tag duration">5 min</span>
+              </li>
+              <li>
+                <span class="talk-title">Riemannian Metric Matching for Scalable Geometric Modelling of Distributions</span><br>
+                <span class="speaker">Jacob Bamberger</span>
+                <span class="tag duration">5 min</span>
+              </li>
+            </ul>
+            <div class="footnote">Followed by a 15-minute Q&amp;A.</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="time">11:00 – 11:15</div>
+          <div class="content">
+            <span class="title">BeyondMath: AI for Physics and Engineering &amp; Competition Announcements</span>
+          </div>
+        </div>
+
+        <div class="row highlight">
+          <div class="time">11:15 – 11:35</div>
+          <div class="content">
+            <span class="tag invited">Invited Talk</span><span class="tag online">online</span>
+            <div><span class="speaker">Anthea Monod</span> — <span class="talk-title">TBA</span></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="time">11:35 – 12:25</div>
+          <div class="content">
+            <span class="tag poster">Poster Session A</span>
+            <div class="meta">Submissions #0–#73</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RIGHT: AFTERNOON -->
+    <section class="session">
+      <div class="session-header">
+        <span class="session-title">Afternoon Session</span>
+        <span class="session-sub">12:25 – 17:00</span>
+      </div>
+      <div class="rows">
+
+        <div class="row break">
+          <div class="time">12:30 – 14:00</div>
+          <div class="content">Lunch</div>
+        </div>
+
+        <div class="row highlight">
+          <div class="time">14:00 – 14:40</div>
+          <div class="content">
+            <span class="tag panel">Panel Discussion</span>
+            <div><span class="title">Do scale and simplicity make geometry obsolete, or more necessary than ever?</span></div>
+            <div class="meta">With <strong>Aditi Krishnapriyan</strong>, <strong>Alexander Tong</strong>, <strong>Gabriel Loaiza-Ganem</strong>, <strong>Max Welling</strong>, and <strong>Michael Bronstein</strong>.</div>
+            <div class="meta">Moderated by <strong>Erik Bekkers</strong>.</div>
+          </div>
+        </div>
+
+        <div class="row break">
+          <div class="time">14:40 – 14:50</div>
+          <div class="content">Break</div>
+        </div>
+
+        <div class="row highlight">
+          <div class="time">14:50 – 15:10</div>
+          <div class="content">
+            <span class="tag invited">Invited Talk</span>
+            <div><span class="speaker">Maya Bechler-Speicher</span> — <span class="talk-title">"Graph Foundational Models"</span></div>
+          </div>
+        </div>
+
+        <div class="row highlight">
+          <div class="time">15:15 – 15:45</div>
+          <div class="content">
+            <span class="tag invited">Invited Talk</span>
+            <div><span class="speaker">Nicholas Boffi</span> — <span class="talk-title">"Flow Map Language Models"</span></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="time">15:45 – 15:55</div>
+          <div class="content"><span class="title">New Theory</span></div>
+        </div>
+
+        <div class="row">
+          <div class="time">15:55 – 16:05</div>
+          <div class="content"><span class="title">Closing Remarks</span></div>
+        </div>
+
+        <div class="row">
+          <div class="time">16:05 – 16:55</div>
+          <div class="content">
+            <span class="tag poster">Poster Session B</span>
+            <div class="meta">Submissions #74–#133 </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="time">16:55 – 17:00</div>
+          <div class="content"><span class="title">Wrap Up</span></div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+</div>
+
+</body>
+</html>
