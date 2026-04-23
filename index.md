@@ -6,10 +6,6 @@ description: "Workshop on Geometry-grounded Representation Learning and Generati
 
 <!-- <h2 id="motivation">(07/12/2025) Exciting news! GRAM is going to Rio!</h2> -->
 
-<div style="width: 100%; background-color: #155799; color: white; text-align: center; padding: 16px 20px; border-radius: 8px; font-size: 1.1em; font-weight: bold; margin-bottom: 20px;">
-  <a href="https://gram-competition.github.io/" style="color: white; text-decoration: underline;">Submit to our competition track!</a> Deadline: April 22, 2026
-</div>
-
 
 
 We are pleased to announce this **second edition of GRaM**, as an **ICLR 2026 workshop**. This year, we will have a focus on **scale and simplicity**. We open three tracks: paper tracks, blogposts track and a new competition track. You can find us on the official [ICLR webpage](https://iclr.cc/virtual/2026/workshop/10000809).
