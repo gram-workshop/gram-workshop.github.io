@@ -100,6 +100,11 @@ We are pleased to announce this **second edition of GRaM**, as an **ICLR 2026 wo
 
 {% include papers26_map.html %}
 
+
+## Accepted blogposts
+
+Have a look at our accepted blogposts here: <a href="https://gram-blogposts.github.io">https://gram-blogposts.github.io</a> ❤️
+
 ## Program
 
 <p style="color: #666; margin-bottom: 16px;">Sunday, April 26, 2026 · Room 101 A.</p>
@@ -179,7 +184,7 @@ We are pleased to announce this **second edition of GRaM**, as an **ICLR 2026 wo
           <span class="program-tag duration">5 min</span>
         </li>
       </ul>
-      <div style="margin-top: 8px; font-size: 0.9em; color: #666;">Followed by a 15-minute Q&amp;A buffer.</div>
+      <div style="margin-top: 8px; font-size: 0.9em; color: #666;">Including a 15-minute Q&amp;A.</div>
     </div>
   </div>
 
@@ -299,7 +304,7 @@ We are pleased to announce this **second edition of GRaM**, as an **ICLR 2026 wo
 - **Paper notification:** ~~March 1st, 2026 (AoE)~~
 - **Paper camera-ready:** ~~March 11th, 2026 (AoE)~~
 - **Blogpost submission:** ~~April 15, 2026 (AoE)~~
-- **Competition submission:** April 22, 2026 (AoE)
+- **Competition submission:** ~~April 22, 2026 (AoE)~~
 - **Workshop dates:** April 26, 2026
 
 ## Call for Blogposts <small>(<a href="https://gram-blogposts.github.io/2026/about/">Submit</a>)</small>
