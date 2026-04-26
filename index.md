@@ -180,7 +180,7 @@ Have a look at our accepted blogposts here: <a href="https://gram-blogposts.gith
         </li>
         <li>
           <a href="https://iclr.cc/virtual/2026/10019445"><span class="program-talk-title">Riemannian Metric Matching for Scalable Geometric Modelling of Distributions</span></a><br>
-          <span class="program-speaker"><strong>Jacob Bamberger</strong>, Adam Gosztolai, Pierre Vandergheynst, Michael M. Bronstein, Iolo Jones</span>
+          <span class="program-speaker"><strong>Jacob Bamberger</strong>, Adam Gosztolai, Pierre Vandergheynst, Michael Bronstein, Iolo Jones</span>
           <span class="program-tag duration">5 min</span>
         </li>
       </ul>
@@ -233,7 +233,7 @@ Have a look at our accepted blogposts here: <a href="https://gram-blogposts.gith
       <span class="program-tag panel">Panel Discussion</span>
       <div style="margin-top: 4px;">
         <span class="program-title"> <a href="https://iclr.cc/virtual/2026/10019451">About scale, simplicity and geometry</a> </span>
-        <br>With <a href="https://kathlenkohn.github.io/">Kathlén Kohn</a>,  <a href="https://a1k12.github.io/">Aditi Krishnapriyan</a> (online), <a href="https://www.alextong.net/">Alexander Tong</a>, <a href="https://gabloa.github.io/">Gabriel Loaiza-Ganem</a>, <a href="https://www.linkedin.com/in/max-welling-4a783910/?originalSubdomain=nl">Max Welling</a>, and <a href="https://www.cs.ox.ac.uk/people/michael.bronstein/">Michael Bronstein</a>. 
+        <br>With <a href="https://kathlenkohn.github.io/">Kathlén Kohn</a>, <a href="https://www.alextong.net/">Alexander Tong</a>, <a href="https://gabloa.github.io/">Gabriel Loaiza-Ganem</a>, <a href="https://www.linkedin.com/in/max-welling-4a783910/?originalSubdomain=nl">Max Welling</a>, and <a href="https://www.cs.ox.ac.uk/people/michael.bronstein/">Michael Bronstein</a>. 
         <br><span style="color: #666;">Moderated by <a href="https://ebekkers.github.io/">Erik Bekkers</a>.</span>
       </div>
     </div>
@@ -269,7 +269,11 @@ Have a look at our accepted blogposts here: <a href="https://gram-blogposts.gith
   <div class="program-row">
     <div class="program-time">15:45 – 15:55</div>
     <div class="program-content">
-      <a href="https://www.newtheory.ai/"><span class="program-title">New Theory</span></a>
+      <span class="program-tag online">online</span>
+      <div style="margin-top: 4px;">
+        <span class="program-speaker">Christian Shewmake</span> —
+        <span class="program-talk-title"><a href="https://www.newtheory.ai/">New Theory</a></span>
+      </div>
     </div>
   </div>
 
@@ -309,11 +313,11 @@ Have a look at our accepted blogposts here: <a href="https://gram-blogposts.gith
 
 ## Call for Blogposts <small>(<a href="https://gram-blogposts.github.io/2026/about/">Submit</a>)</small>
 
-We invite submissions to our **blogpost track**. We welcome blog posts in the ICLR Distill format that communicate ideas clearly and accessibly. See the full guidelines and submit on the [blogpost website](https://gram-blogposts.github.io/2026/about/), and explore [blog posts from GRaM 2024](https://gram-blogposts.github.io/2024/) for examples. **Deadline: April 15, 2026 (AoE).**
+Thank you to everyone who submitted a blogpost! Our call is now closed, and we invite you to explore all the accepted posts on our blog: <a href="https://gram-blogposts.github.io">https://gram-blogposts.github.io</a>. We are truly grateful to all the authors for sharing their ideas and taking the time to craft such insightful contributions.
 
 ## Call for Competition <small>(<a href="https://gram-competition.github.io/">Submit</a>)</small>
 
-We are hosting a **benchmark challenge** on transient airflow prediction over 3D geometries inspired by Formula 1 front wings, with simulation data provided by [BeyondMath](https://beyondmath.com/). Given a geometry and airflow at previous time points, predict the airflow at future time points. The winner receives the **MCML Award (500 € prize)**. All valid submissions will be published in the workshop proceedings with co-authorship. Submissions are made via pull requests — see the [competition website](https://gram-competition.github.io/) for details. **Deadline: April 22, 2026 (AoE).**
+The call is now closed. We were hosting a **benchmark challenge** on transient airflow prediction over 3D geometries inspired by Formula 1 front wings, with simulation data provided by [BeyondMath](https://beyondmath.com/). Given a geometry and airflow at previous time points, predict the airflow at future time points. The winner receives the **MCML Award (500 € prize)**. All valid submissions will be published in the workshop proceedings with co-authorship. Submissions are made via pull requests — see the [competition website](https://gram-competition.github.io/) for details. **Deadline: April 22, 2026 (AoE).**
 
 ## Accepted Papers <small>(<a href="https://openreview.net/group?id=ICLR.cc/2026/Workshop/GRaM">OpenReview</a>)</small>
 
